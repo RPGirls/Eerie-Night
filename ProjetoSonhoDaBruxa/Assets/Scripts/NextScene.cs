@@ -22,7 +22,7 @@ namespace Assets.Scripts
 
         public void Update()
         {
-            if(!CanPressEnter)
+            if (!CanPressEnter)
                 return;
             if (Input.anyKey)
                 SceneManager.LoadScene(GameSceneName);
