@@ -19,14 +19,14 @@ namespace Assets.Scripts
         {
             if (Pause.Instance.IsPauseActive())
                 return;
-            if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
+            if (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.S) && _ready == false)
             {
                 _startTime = Time.time;
                 _pressTime = _startTime + HoldTime;
                 _ready = true;
                 ShowLight();
             }
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyDown(KeyCode.S))
             {
                 _ready = false;
                 EndLight();
