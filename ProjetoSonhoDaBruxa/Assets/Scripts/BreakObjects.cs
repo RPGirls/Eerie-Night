@@ -19,7 +19,6 @@ namespace Assets.Scripts
         {
             if (Pause.Instance.IsPauseActive())
                 return;
-
             if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
             {
                 _startTime = Time.time;

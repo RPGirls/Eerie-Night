@@ -27,13 +27,11 @@ namespace Assets.Scripts
             _rb.freezeRotation = true;
 
         }
-
+        
         public void Update () {
-
-            if(Pause.Instance.IsPauseActive())
+            if (Pause.Instance.IsPauseActive())
                 return;
-
-			if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) 
+            if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) 
 				|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W))){
 				_canFlip = false;
 			} else {
