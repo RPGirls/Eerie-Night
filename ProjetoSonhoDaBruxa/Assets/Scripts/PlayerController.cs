@@ -8,10 +8,22 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody2D _rb;
 
+	public static PlayerController Instance = null;
+
+	public void Awake()
+	{
+		if (Instance == null)//Check if instance already exists
+			Instance = this;//if not, set instance to this
+		else if (Instance != this)//If instance already exists and it's not this:
+			Destroy(gameObject); //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+	}
+
 	// Use this for initialization
 	void Start () {
 
 		_rb = transform.GetComponent<Rigidbody2D> ();
+		_rb.gravityScale = 0.0f;
+		_rb.freezeRotation = true;
 
 	}
 
@@ -43,4 +55,9 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
+
+	public Vector3 GetPosition(){
+		return transform.position;
+	}
+
 }
