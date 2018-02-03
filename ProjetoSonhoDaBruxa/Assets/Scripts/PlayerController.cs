@@ -8,7 +8,6 @@ namespace Assets.Scripts
 
 		public static PlayerController Instance = null;
 
-
         private Rigidbody2D _rb;
 		private string _lastDirection;
 		private bool _canFlip;
@@ -78,13 +77,13 @@ namespace Assets.Scripts
 				}
             }
 
-            if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp (KeyCode.W)
-                || Input.GetKeyUp (KeyCode.S)) {
+			if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp (KeyCode.D) || Input.GetKeyUp (KeyCode.W)
+			             || Input.GetKeyUp (KeyCode.S)) {
 
 				_rb.velocity = new Vector2 (0, 0);
 				// Trigger Idle
-				Debug.Log("Idle animation");
-            }
+				Debug.Log ("Idle animation");
+			} 
 
         }
 
