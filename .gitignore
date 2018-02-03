@@ -32,3 +32,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+/Projeto Sonho da Bruxa/Library
+/Projeto Sonho da Bruxa/Temp
