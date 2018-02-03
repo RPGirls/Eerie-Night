@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4465501642069638}
   - component: {fileID: 212857801952231920}
   - component: {fileID: 50307174480250596}
+  - component: {fileID: 61050955102056486}
   - component: {fileID: 114699138706313282}
   - component: {fileID: 114704412164740762}
-  - component: {fileID: 70276095584040848}
+  - component: {fileID: 58838308066466872}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -72,7 +73,7 @@ GameObject:
   - component: {fileID: 4560776114314482}
   - component: {fileID: 212424320358418234}
   m_Layer: 0
-  m_Name: sprite
+  m_Name: teenagewitch_color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,8 +154,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &70276095584040848
-CapsuleCollider2D:
+--- !u!58 &58838308066466872
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -165,9 +166,34 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03336817, y: 0}
-  m_Size: {x: 0.78289855, y: 1.8840473}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!61 &61050955102056486
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432450488973814}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.26, y: 0.28, z: 0.32, w: 0.28}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 1.2}
+    newSize: {x: 2.25, y: 2.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.7}
+  m_EdgeRadius: 0
 --- !u!108 &108264254599922814
 Light:
   m_ObjectHideFlags: 1
