@@ -190,14 +190,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 557855936}
-        m_MethodName: GoToNextScene
+        m_MethodName: set_name
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Tutorial
+          m_StringArgument: MainGame
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -679,8 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b248ab56051774484953d29e78109f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanPressEnter: 0
-  GameSceneName: 
 --- !u!1 &632929473
 GameObject:
   m_ObjectHideFlags: 0
