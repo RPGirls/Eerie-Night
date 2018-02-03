@@ -14,6 +14,12 @@ namespace Assets.Scripts
         private float _startTime = 0f;
         private bool _ready;
         private float _pressTime;
+		private PlayerController _playerControl;
+
+		void Start(){
+
+			_playerControl = PlayerController.Instance;
+		}
 
         public void Update()
         {
@@ -23,6 +29,7 @@ namespace Assets.Scripts
             {
                 _startTime = Time.time;
                 _pressTime = _startTime + HoldTime;
+				_playerControl._isPulling = true;
                 _ready = true;
                 ShowLight();
             }
@@ -30,11 +37,13 @@ namespace Assets.Scripts
             {
                 _ready = false;
                 EndLight();
+				_playerControl._isPulling = false;
             }
             if (Time.time >= _pressTime && _ready)
             {
                 _ready = false;
                 FindObjectAndBreak();
+				_playerControl._isPulling = false;
             }
 
         }
