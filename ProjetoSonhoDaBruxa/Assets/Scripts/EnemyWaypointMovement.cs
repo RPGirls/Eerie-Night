@@ -42,13 +42,13 @@ namespace Assets.Scripts
             _currentWaypoint = Points[_pointsIterator];
         }
 
-        public void OnDrawGizmos()
-        {
-            foreach (var point in Points)
-            {
-                Gizmos.color = Color.magenta;
-                Gizmos.DrawWireSphere(point, .2f);
-            }
-        }
+        /*  public void OnDrawGizmos()
+          {
+              foreach (var point in Points)
+              {
+                  Gizmos.color = Color.magenta;
+                  Gizmos.DrawWireSphere(point, .2f);
+              }
+          } */
     }
 }

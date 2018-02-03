@@ -14,6 +14,12 @@ namespace Assets.Scripts
         private float _startTime = 0f;
         private bool _ready;
         private float _pressTime;
+		private PlayerController _playerControl;
+
+		void Start(){
+
+			_playerControl = PlayerController.Instance;
+		}
 
         public void Update()
         {
@@ -21,20 +27,26 @@ namespace Assets.Scripts
                 return;
             if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
             {
-                _startTime = Time.time;
-                _pressTime = _startTime + HoldTime;
-                _ready = true;
-                ShowLight();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    _startTime = Time.time;
+                    _pressTime = _startTime + HoldTime;
+                    _playerControl._isPulling = true;
+                    _ready = true;
+                    ShowLight();
+                }
             }
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S))
             {
                 _ready = false;
                 EndLight();
+				_playerControl._isPulling = false;
             }
             if (Time.time >= _pressTime && _ready)
             {
                 _ready = false;
                 FindObjectAndBreak();
+				_playerControl._isPulling = false;
             }
 
         }
