@@ -1,24 +1,57 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 namespace Assets.Scripts
 {
     public class BreakObjects : MonoBehaviour {
     
         public float Radius;
-    
-        // Interactive
+        [Tooltip("Tempo para segurar espaço")]
+        public float HoldTime = 5.0f; // 5 seconds
 
-        // Objetos quebram e soltam uma particula em direção ao player
+        public Light Light;
 
-        // Update is called once per frame
-        public void Update () {
+        private float _startTime = 0f;
+        private bool _ready;
+        private float _pressTime;
 
-            if(Input.GetKeyDown (KeyCode.Space)){
-                Collider2D col = FindObject ();
-                if (col != null)
-                    BreakObject(col);
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
+            {
+                _startTime = Time.time;
+                _pressTime = _startTime + HoldTime;
+                _ready = true;
+                ShowLight();
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                _ready = false;
+                EndLight();
+            }
+            if (Time.time >= _pressTime && _ready)
+            {
+                _ready = false;
+                FindObjectAndBreak();
             }
 
+        }
+
+        private void EndLight()
+        {
+            Light.color = Color.white;
+        }
+
+        private void ShowLight()
+        {
+            Light.color = Color.red;
+        }
+
+        private void FindObjectAndBreak()
+        {
+            Collider2D col = FindObject();
+            if (col != null)
+                BreakObject(col);
         }
 
         private void BreakObject(Collider2D col)
