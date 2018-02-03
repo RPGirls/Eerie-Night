@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 
 		_rb = transform.GetComponent<Rigidbody2D> ();
 		_rb.gravityScale = 0.0f;
+		_rb.freezeRotation = true;
 
 	}
 
