@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212688780142587568}
   - component: {fileID: 114265647521031208}
   - component: {fileID: 61384632653374846}
+  - component: {fileID: 114296725270760400}
   m_Layer: 0
   m_Name: EnemyHand
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252810221172604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: -0.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.44844845, y: 0.44844845, z: 0.44844845}
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,6 +77,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad3efdae55ee44919e24560181a5c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114296725270760400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1252810221172604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdd0e78f9d0a0b40baf52b2a451a604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212688780142587568
