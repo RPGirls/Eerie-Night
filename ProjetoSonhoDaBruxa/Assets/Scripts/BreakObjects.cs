@@ -53,7 +53,7 @@ public class BreakObjects : MonoBehaviour {
 	}
 
 
-	void OnValidade() {
+	void OnValidate() {
 		Gizmos.color = Color.cyan;
 		Gizmos.DrawWireSphere (_player.GetPosition(), Radius);
 	}
