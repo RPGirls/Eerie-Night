@@ -1,19 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraController : MonoBehaviour {
+namespace Assets.Scripts
+{
+    public class CameraController : MonoBehaviour {
 
-	public GameObject Player;
-
-	// Use this for initialization
-	void Start () {
+        public GameObject Player;
+    
+        // Update is called once per frame
+        public void Update () {
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-		transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
-	}
+            transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
+        }
+    }
 }
