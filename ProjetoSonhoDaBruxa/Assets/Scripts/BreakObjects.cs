@@ -7,7 +7,7 @@ namespace Assets.Scripts
     
         public float Radius;
         [Tooltip("Tempo para segurar espaço")]
-        public float HoldTime = 5.0f; // 5 seconds
+        public float HoldTime; 
 
         public Light Light;
 
