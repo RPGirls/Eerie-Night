@@ -1,60 +1,52 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BreakObjects : MonoBehaviour {
+namespace Assets.Scripts
+{
+    public class BreakObjects : MonoBehaviour {
+    
+        public float Radius;
+    
+        // Interactive
 
-	public Sprite BrokenObject;
-	public float Radius = 10.0f;
+        // Objetos quebram e soltam uma particula em direção ao player
 
-	private PlayerController _player;
+        // Update is called once per frame
+        public void Update () {
 
-	// Use this for initialization
-	void Start () {
+            if(Input.GetKeyDown (KeyCode.Space)){
+                Collider col = FindObject ();
+            }
 
-		_player = PlayerController.Instance;
-	}
-	// Interactive
+        }
 
-	// Objetos quebram e soltam uma particula em direção ao player
+        Collider FindObject ()
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, Radius);
 
-	// Update is called once per frame
-	void Update () {
+            Debug.Log (transform.position + " posicao player");
 
-		if(Input.GetKeyDown (KeyCode.Space)){
-			Collider col = FindObject ();
-			Debug.Log (col.name);
-		}
+            Collider nearestCollider = null;
+            float minSqrDistance = Mathf.Infinity;
 
-	}
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                float sqrDistanceToCenter = (transform.position - colliders[i].transform.position).sqrMagnitude;
 
-	Collider FindObject (){
-		
-		Collider[] colliders = Physics.OverlapSphere(_player.GetPosition(), Radius);
+                if (sqrDistanceToCenter < minSqrDistance)
+                {
+                    minSqrDistance = sqrDistanceToCenter;
+                    nearestCollider = colliders[i];
+                }
+            }
 
-		Debug.Log (_player.GetPosition () + " posicao player");
-
-		Collider nearestCollider = null;
-		float minSqrDistance = Mathf.Infinity;
-
-		for (int i = 0; i < colliders.Length; i++)
-		{
-			float sqrDistanceToCenter = (_player.GetPosition() - colliders[i].transform.position).sqrMagnitude;
-
-			if (sqrDistanceToCenter < minSqrDistance)
-			{
-				minSqrDistance = sqrDistanceToCenter;
-				nearestCollider = colliders[i];
-			}
-		}
-
-		Debug.Log (minSqrDistance + " Distancia");
-		return nearestCollider;
-	}
+            Debug.Log (minSqrDistance + " Distancia");
+            return nearestCollider;
+        }
 
 
-	void OnValidade() {
-		Gizmos.color = Color.cyan;
-		Gizmos.DrawWireSphere (_player.GetPosition(), Radius);
-	}
+        public void OnDrawGizmos() {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(transform.position, Radius);
+        }
+    }
 }
