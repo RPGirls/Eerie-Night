@@ -56,6 +56,7 @@ namespace Assets.Scripts
 
         private void BreakObject(Collider2D col)
         {
+            Mirror.Instance.AddBrokenObject();
             col.GetComponent<BreakableObject>().BreakObject();
         }
 

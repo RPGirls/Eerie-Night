@@ -8,7 +8,7 @@ namespace Assets.Scripts
         {
             if (other.tag == "Player")
             {
-                WinGame.Instance.EndGame();
+                RespawnPlayer.Instance.EndGame();
             }
         }
 
