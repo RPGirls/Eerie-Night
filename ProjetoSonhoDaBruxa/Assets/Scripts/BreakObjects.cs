@@ -17,6 +17,9 @@ namespace Assets.Scripts
 
         public void Update()
         {
+            if (Pause.Instance.IsPauseActive())
+                return;
+
             if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
             {
                 _startTime = Time.time;
