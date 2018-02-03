@@ -25,15 +25,18 @@ namespace Assets.Scripts
         {
             if (Pause.Instance.IsPauseActive())
                 return;
-            if (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.S) && _ready == false)
+            if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
             {
-                _startTime = Time.time;
-                _pressTime = _startTime + HoldTime;
-				_playerControl._isPulling = true;
-                _ready = true;
-                ShowLight();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    _startTime = Time.time;
+                    _pressTime = _startTime + HoldTime;
+                    _playerControl._isPulling = true;
+                    _ready = true;
+                    ShowLight();
+                }
             }
-            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S))
             {
                 _ready = false;
                 EndLight();
