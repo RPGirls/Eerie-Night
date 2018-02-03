@@ -9,6 +9,7 @@ namespace Assets.Scripts
         private float _startTime;
         private Vector3 _currentWaypoint;
         private int _pointsIterator = 0;
+        private bool _changedWaypoint = false;
 
 
         public void Start()
@@ -18,9 +19,10 @@ namespace Assets.Scripts
         }
 
         public void Update () {
-            if (transform.position == _currentWaypoint)
+            if (Vector3.Distance(transform.position, _currentWaypoint) <= 0.02 && !_changedWaypoint)
             {
                 ChangeWayPoint();
+                _changedWaypoint = true;
                 return;
             }
 
@@ -28,7 +30,8 @@ namespace Assets.Scripts
             var distCovered = (Time.time - _startTime) * Speed; // Distance moved = time * speed.
             var fracJourney = distCovered / journeyLength; // Fraction of journey completed = current distance divided by total distance.
             
-            transform.position = Vector3.Lerp(transform.position, _currentWaypoint, Speed);
+            transform.position = Vector3.Lerp(transform.position, _currentWaypoint, 1/Speed);
+            _changedWaypoint = false;
         }
 
         private void ChangeWayPoint()

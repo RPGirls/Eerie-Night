@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4329343148843344}
   - component: {fileID: 212371898503355420}
   - component: {fileID: 114663281476578244}
+  - component: {fileID: 58483536313240536}
+  - component: {fileID: 114427857559701528}
   m_Layer: 0
   m_Name: MovingEnemy
   m_TagString: Untagged
@@ -41,6 +43,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58483536313240536
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413607857889798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.03
+--- !u!114 &114427857559701528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1413607857889798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdd0e78f9d0a0b40baf52b2a451a604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114663281476578244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,7 +83,7 @@ MonoBehaviour:
   Points:
   - {x: -2.31, y: 0, z: -0.2}
   - {x: -5.35, y: 0, z: -0.2}
-  Speed: 0.06
+  Speed: 27
 --- !u!212 &212371898503355420
 SpriteRenderer:
   m_ObjectHideFlags: 1
