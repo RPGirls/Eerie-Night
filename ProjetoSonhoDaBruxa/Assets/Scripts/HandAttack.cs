@@ -25,10 +25,10 @@ namespace Assets.Scripts
 			
                 //trigger animation
                 if (_attacking) {
-                    gameObject.transform.Rotate (0, 0, 90);
+                    gameObject.transform.Rotate (0, 0, -90);
                     _attacking = false;
                 } else {
-                    gameObject.transform.Rotate (0, 0, -90);
+                    gameObject.transform.Rotate (0, 0, 90);
                     _attacking = true;
                 }
 
