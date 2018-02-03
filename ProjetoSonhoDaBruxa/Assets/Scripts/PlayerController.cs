@@ -19,20 +19,19 @@ namespace Assets.Scripts
             else if (Instance != this)//If instance already exists and it's not this:
                 Destroy(gameObject); //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
         }
-
-        // Use this for initialization
-        void Start () {
+        
+        public void Start () {
 
             _rb = transform.GetComponent<Rigidbody2D> ();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
 
         }
-
-        // Update is called once per frame
-        void Update () {
-
-			if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) 
+        
+        public void Update () {
+            if (Pause.Instance.IsPauseActive())
+                return;
+            if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) 
 				|| (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W))){
 				_canFlip = false;
 			} else {
