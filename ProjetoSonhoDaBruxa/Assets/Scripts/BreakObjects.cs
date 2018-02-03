@@ -14,32 +14,35 @@ namespace Assets.Scripts
         public void Update () {
 
             if(Input.GetKeyDown (KeyCode.Space)){
-                Collider col = FindObject ();
+                Collider2D col = FindObject ();
+                if (col != null)
+                    BreakObject(col);
             }
 
         }
 
-        Collider FindObject ()
+        private void BreakObject(Collider2D col)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, Radius);
+            col.GetComponent<BreakableObject>().BreakObject();
+        }
 
-            Debug.Log (transform.position + " posicao player");
+        Collider2D FindObject ()
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, Radius);
 
-            Collider nearestCollider = null;
+            Collider2D nearestCollider = null;
             float minSqrDistance = Mathf.Infinity;
 
-            for (int i = 0; i < colliders.Length; i++)
+            foreach (Collider2D col in colliders)
             {
-                float sqrDistanceToCenter = (transform.position - colliders[i].transform.position).sqrMagnitude;
+                float sqrDistanceToCenter = (transform.position - col.transform.position).sqrMagnitude;
 
-                if (sqrDistanceToCenter < minSqrDistance)
+                if (sqrDistanceToCenter < minSqrDistance && col.CompareTag("Interactive"))
                 {
                     minSqrDistance = sqrDistanceToCenter;
-                    nearestCollider = colliders[i];
+                    nearestCollider = col;
                 }
             }
-
-            Debug.Log (minSqrDistance + " Distancia");
             return nearestCollider;
         }
 

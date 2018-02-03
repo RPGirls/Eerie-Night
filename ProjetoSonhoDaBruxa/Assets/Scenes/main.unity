@@ -403,6 +403,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1029141165552032, guid: 56874e8e8089b43209849f14cbae2e56, type: 2}
+      propertyPath: m_TagString
+      value: Interactive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56874e8e8089b43209849f14cbae2e56, type: 2}
   m_IsPrefabParent: 0
@@ -482,4 +486,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24f2950f935812468cbf2215ac68dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrokenObject: {fileID: 0}
+  BrokenObject: {fileID: 21300000, guid: 37826f4d71e4746eba3ca9ad166ec0f0, type: 3}
