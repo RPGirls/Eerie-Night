@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 
 		_rb = transform.GetComponent<Rigidbody2D> ();
+		_rb.gravityScale = 0.0f;
 
 	}
 
@@ -57,4 +58,5 @@ public class PlayerController : MonoBehaviour {
 	public Vector3 GetPosition(){
 		return transform.position;
 	}
+
 }
