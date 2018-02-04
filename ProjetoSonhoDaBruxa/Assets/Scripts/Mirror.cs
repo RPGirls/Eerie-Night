@@ -6,6 +6,7 @@ namespace Assets.Scripts
     public class Mirror : MonoBehaviour {
         public string WinLevel;
         public int NumberOfObjects;
+        [SerializeField]
         private int _objectCounter = 0;
 
         public static Mirror Instance = null;

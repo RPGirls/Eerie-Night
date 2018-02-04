@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1334478192379164
 GameObject:
   m_ObjectHideFlags: 1
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1521977137221268
 GameObject:
   m_ObjectHideFlags: 1
@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1567893315070094
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1961717675547944
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ Transform:
   m_GameObject: {fileID: 1848692408344214}
   m_LocalRotation: {x: 0.41469225, y: 0.9099591, z: 0.0009192138, w: 0.0020170305}
   m_LocalPosition: {x: 0.935, y: 2.852, z: 0}
-  m_LocalScale: {x: 0.51034594, y: 0.5103277, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4412427306096256}
   m_Father: {fileID: 4351058100492684}
@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 1282560072171512}
   m_LocalRotation: {x: 0.41469225, y: 0.9099591, z: 0.0009192138, w: 0.0020170305}
   m_LocalPosition: {x: 1.535, y: 2.29, z: 0}
-  m_LocalScale: {x: 0.51034594, y: 0.510311, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4599945168197774}
   m_Father: {fileID: 4351058100492684}
@@ -327,7 +327,7 @@ Transform:
   m_GameObject: {fileID: 1521977137221268}
   m_LocalRotation: {x: 0.41469225, y: 0.9099591, z: 0.0009192138, w: 0.0020170305}
   m_LocalPosition: {x: -1.53, y: 2.08, z: 0}
-  m_LocalScale: {x: 0.51035255, y: 0.5103521, z: 0.5103526}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4305088684881506}
   m_Father: {fileID: 4351058100492684}
@@ -341,7 +341,7 @@ Transform:
   m_GameObject: {fileID: 1446593262555996}
   m_LocalRotation: {x: 0.41469225, y: 0.9099591, z: 0.0009192138, w: 0.0020170305}
   m_LocalPosition: {x: -0.835, y: 2.766, z: 0}
-  m_LocalScale: {x: 0.51034594, y: 0.51034427, z: 3.2755632e-10}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4024839058868824}
   m_Father: {fileID: 4351058100492684}
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinLevel: WinScene
-  NumberOfObjects: 1
+  NumberOfObjects: 4
 --- !u!114 &114767769099667606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -446,8 +446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81bc6929d9394cc78964998e82ec331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OrbsCounter: 0
-  Orbs: []
+  _orbsCounter: 0
+  Orbs:
+  - {fileID: 1521977137221268}
+  - {fileID: 1446593262555996}
+  - {fileID: 1848692408344214}
+  - {fileID: 1282560072171512}
 --- !u!198 &198091321528867600
 ParticleSystem:
   m_ObjectHideFlags: 1
