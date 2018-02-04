@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9381ba6cccb163d40b928597a5c56f1d
-timeCreated: 1517706695
+timeCreated: 1517748383
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -126,34 +126,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: broken_scale_0
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 197
-        width: 23
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_scale_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 77
-        width: 162
-        height: 156
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: broken_scale_2
       rect:
         serializedVersion: 2
@@ -162,7 +134,7 @@ TextureImporter:
         width: 132
         height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +148,7 @@ TextureImporter:
         width: 112
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,7 +162,7 @@ TextureImporter:
         width: 150
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,6 +175,20 @@ TextureImporter:
         y: 86
         width: 195
         height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: broken_scale_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 65
+        width: 180
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
