@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class PlayerController : MonoBehaviour
     {
 
-        public float PlayerPace = 2.0f;
-        public float SlowerPace = 0.5f;
+        public float PlayerPace;
+        public float SlowerPace;
 
+        public float TimeFrozenWhenRespawn;
         public float AcelerationForce;
         
 
@@ -22,6 +24,8 @@ namespace Assets.Scripts
 		private Animator _anim;
 
         public static PlayerController Instance = null;
+        private Vector3 _rebornPosition;
+        private bool _dead;
 
         public void Awake()
         {
@@ -47,17 +51,22 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
+            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || _dead)
+            {
+                IsMoving = false;
+                _rb.velocity = new Vector2(0, 0);
+            }
+
+            if(_dead)
+                return;
+
             SetCanFlip();
 
 			GetKeys();
 
             GetKeysUp();
 
-            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down)
-            {
-                IsMoving = false;
-                _rb.velocity = new Vector2(0, 0);
-            }
+            
 
             _anim.SetBool("IsWalking", IsMoving);
             _anim.SetBool("Idle", !IsMoving);
@@ -170,12 +179,28 @@ namespace Assets.Scripts
                 _rb.velocity = new Vector2(xVector.x * PlayerPace, _rb.velocity.y);
         }
 
-        public void SetPosition(Vector3 position)
+        public void Die(Vector3 position)
         {
-            transform.position = position;
+            _anim.SetBool("Dead", true);
+            _dead = true;
+            _rebornPosition = position;
         }
 
-		public void ApplyForce()
+        public void Reborn()
+        {
+            StartCoroutine("SetDeadFalse");
+            _anim.SetBool("Dead", false);
+            transform.position = _rebornPosition;
+        }
+
+        private IEnumerator SetDeadFalse()
+        {
+            yield return new WaitForSeconds(TimeFrozenWhenRespawn);
+            _dead = false;
+        }
+
+
+        public void ApplyForce()
 		{
 		    if (_directions.Up)
                 AddForce(Vector2.up);
