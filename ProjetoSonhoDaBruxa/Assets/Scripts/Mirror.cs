@@ -29,8 +29,12 @@ namespace Assets.Scripts
 
         public void AddBrokenObject()
         {
-            Debug.Log("win");
             _objectCounter ++;
+        }
+
+        public int GetObjectCounter()
+        {
+            return _objectCounter;
         }
     }
 }
