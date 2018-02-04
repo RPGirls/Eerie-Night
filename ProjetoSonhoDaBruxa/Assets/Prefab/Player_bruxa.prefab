@@ -895,6 +895,7 @@ MonoBehaviour:
   PlayerPace: 2.5
   SlowerPace: 0.15
   IsPulling: 0
+  IsMoving: 0
 --- !u!114 &114262705423445160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1306,7 +1307,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 43373907837907230, guid: 42118c8cb4dae9a438df3f43b3ddc007, type: 2}
   m_Bones:
   - {fileID: 4579681674146830}
   - {fileID: 4146751331396738}
