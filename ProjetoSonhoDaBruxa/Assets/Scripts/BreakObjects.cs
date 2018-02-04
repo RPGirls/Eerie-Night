@@ -136,8 +136,9 @@ namespace Assets.Scripts
 
         private void BreakObject(Collider2D col)
         {
-            Mirror.Instance.AddBrokenObject(col.gameObject);
-            col.GetComponent<BreakableObject>().BreakObject();
+            var breakable = col.GetComponent<BreakableObject>();
+            Mirror.Instance.AddBrokenObject(breakable);
+            breakable.BreakObject();
         }
 
         Collider2D FindNearestObject()
