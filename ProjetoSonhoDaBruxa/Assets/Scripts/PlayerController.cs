@@ -18,7 +18,6 @@ namespace Assets.Scripts
 
         private Rigidbody2D _rb;
         private string _lastDirection;
-        private bool _canFlip;
         private MovementDirection _directions;
 		private bool _afterPulling;
         
@@ -63,8 +62,6 @@ namespace Assets.Scripts
             if(IsDead)
                 return;
 			
-            SetCanFlip();
-
 			GetKeys();
 
             GetKeysUp();
@@ -80,22 +77,6 @@ namespace Assets.Scripts
                 _directions.Up = false;
             else if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
                 _directions.Down = false;
-        }
-
-        private void SetCanFlip()
-        {
-            if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) ||
-                 Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
-                ||
-                (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) ||
-                 Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
-            {
-                _canFlip = false;
-            }
-            else
-            {
-                _canFlip = true;
-            }
         }
 
         private void GetKeys()
@@ -139,7 +120,7 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
-            if (_lastDirection != "D" && _canFlip && !IsPulling)
+            if (_lastDirection != "D" && !IsPulling)
             {
 				if (transform.localScale.x > 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -153,7 +134,7 @@ namespace Assets.Scripts
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
-            if (_lastDirection != "A" && _canFlip && !IsPulling)
+            if (_lastDirection != "A" && !IsPulling)
             {
 				if (transform.localScale.x < 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
