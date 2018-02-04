@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using 
 
 namespace Assets.Scripts
 {
@@ -37,8 +38,11 @@ namespace Assets.Scripts
         private void ChangeWayPoint()
         {
             _pointsIterator ++;
-            if (_pointsIterator == Points.Length)
-                _pointsIterator = 0;
+			if (_pointsIterator == Points.Length) {
+				_pointsIterator = 1;
+				System.Array.Reverse (Points);
+
+			}
             _currentWaypoint = Points[_pointsIterator];
         }
 
