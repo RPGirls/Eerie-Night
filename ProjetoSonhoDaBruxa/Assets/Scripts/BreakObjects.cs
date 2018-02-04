@@ -11,15 +11,35 @@ namespace Assets.Scripts
 
         public Light Light;
 
+		public ParticleEmitter p;
+		public Particle[] particles;
+		public float affectDistance = 10.0f;
+		private float _sqrDist;
+		private Transform _tr;
+
         private float _startTime = 0f;
         private bool _ready;
         private float _pressTime;
 		private PlayerController _playerControl;
+        private bool _pressing;
+        public static BreakObjects Instance = null;
 
-		public void Start(){
+        public void Awake()
+        {
+            if (Instance == null) //Check if instance already exists
+                Instance = this; //if not, set instance to this
+            else if (Instance != this) //If instance already exists and it's not this:
+                Destroy(gameObject);
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+        }
 
+        public void Start(){
 			_playerControl = PlayerController.Instance;
-		}
+            /*_tr = _playerControl.gameObject.transform;
+			p = (ParticleEmitter)(GameObject.Find("Particle_colocarorb").GetComponent(typeof(ParticleEmitter)));
+			particles = p.particles;
+			_sqrDist = affectDistance*affectDistance;*/
+        }
 
         public void Update()
         {
@@ -28,19 +48,19 @@ namespace Assets.Scripts
 
             Collider2D col = FindNearestObject();
 
-			if ((_playerControl.IsMoving && Input.GetKeyDown(KeyCode.Space)) && _ready == false && col !=null)
+            if (Input.GetKey(KeyCode.Space) && _playerControl.IsMoving && _ready == false && col != null && !_pressing)
             {
-				//if (Input.GetKeyDown(KeyCode.Space) && _playerControl.IsMoving)
-                //{
-                    StillPressing();
-               // }*/
+                _pressing = true;
+                StillPressing();
             }
             if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S) || col == null)
             {
+                _pressing = false;
                 StoppedPressing();
             }
             if (Time.time >= _pressTime && _ready)
             {
+                _pressing = false;
                 PressedEnoughTime(col);
             }
 
@@ -48,7 +68,8 @@ namespace Assets.Scripts
 
         private void StillPressing()
         {
-            _startTime = Time.time;
+			//makeParticlesFollow ();
+			_startTime = Time.time;
             _pressTime = _startTime + HoldTime;
             _playerControl.IsPulling = true;
             _ready = true;
@@ -71,6 +92,20 @@ namespace Assets.Scripts
             _playerControl.IsPulling = false;
 			_playerControl.ApplyForce ();
         }
+
+		// Codigo do cara que eu copiei
+		/*private void makeParticlesFollow (){
+			
+			float dist;
+			for (int i=0; i < particles.GetUpperBound(0))
+			{
+				dist = Vector3.SqrMagnitude(_tr.position - particles[i].position);
+				if (dist < _sqrDist) {
+					particles[i].position = Vector3.Lerp(particles[i].position,transform.position,Time.deltaTime / 2.0f);
+				}
+			}
+			p.particles = particles;
+		}*/
 
         private void StopParticle()
         {
@@ -125,6 +160,10 @@ namespace Assets.Scripts
             return nearestCollider;
         }
 
+        public bool GetIfPressingButtonsToBreakObjects()
+        {
+            return _pressing;
+        }
 
         public void OnDrawGizmos() {
             Gizmos.color = Color.cyan;
