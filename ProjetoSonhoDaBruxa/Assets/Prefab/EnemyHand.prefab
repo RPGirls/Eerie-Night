@@ -206,8 +206,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252810221172604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.15, y: -11.55, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.83, y: 15.75, z: 0}
   m_LocalScale: {x: 0.28, y: 0.28, z: 0}
   m_Children:
   - {fileID: 4516348106718552}
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_SpriteMesh: {fileID: 11400000, guid: 8519cdc474fb5394f84b64edf900ab7b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5ee60e55cf4316c44bee9e605f2ad833, type: 2}
   m_SortingLayerID: -1123146351
   m_SortingOrder: 3
   m_Bones: []
