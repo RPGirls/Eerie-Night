@@ -49,7 +49,7 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
-            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || IsDead)
+            if (!_directions.Left || !_directions.Right || !_directions.Up || !_directions.Down || IsDead)
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
@@ -110,11 +110,11 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
-            if (_lastDirection != "S" && _canFlip && !IsPulling)
+           /* if (_lastDirection != "S" && _canFlip && !IsPulling)
             {
-                Debug.Log("Flip baixo");
+                //Debug.Log("Flip baixo");
                 _lastDirection = "S";
-            }
+            }*/
         }
 
         private void GoingUp()
@@ -122,12 +122,12 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
-            if (_lastDirection != "W" && _canFlip)
+          /*  if (_lastDirection != "W" && _canFlip)
             {
-                Debug.Log("Flip cima");
+                //Debug.Log("Flip cima");
 				//_anim.SetTrigger ("idle");
                 _lastDirection = "W";
-            }
+            }*/
         }
 
         private void SetVelocityUpDown( Vector2 yVector)
@@ -145,7 +145,8 @@ namespace Assets.Scripts
             SetVelocityLeftRight(Vector2.right);
             if (_lastDirection != "D" && _canFlip && !IsPulling)
             {
-                Debug.Log("Flip direita");
+				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                //Debug.Log("Flip direita");
                 _lastDirection = "D";
             }
         }
@@ -157,6 +158,7 @@ namespace Assets.Scripts
             SetVelocityLeftRight(Vector2.left);
             if (_lastDirection != "A" && _canFlip && !IsPulling)
             {
+				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
                 //Flip para esquerda
                 Debug.Log("Flip esquerda");
                 _lastDirection = "A";
