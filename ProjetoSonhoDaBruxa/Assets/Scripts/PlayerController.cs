@@ -127,6 +127,9 @@ namespace Assets.Scripts
 				}
                 _lastDirection = "D";
             }
+
+			//if (transform.localScale.x < 0 && IsPulling) 
+			//	transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 
         private void GoingLeft()
@@ -139,9 +142,12 @@ namespace Assets.Scripts
 				if (transform.localScale.x < 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				}
-                Debug.Log("Flip esquerda");
                 _lastDirection = "A";
             }
+
+			//if (transform.localScale.x > 0 && IsPulling) 
+				//transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			
         }
 
         private void SetVelocityLeftRight(Vector2 xVector)
