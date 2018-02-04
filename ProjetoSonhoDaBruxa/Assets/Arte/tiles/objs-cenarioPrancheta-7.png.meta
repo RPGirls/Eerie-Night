@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9935dfb13ce77e04193585bb8c9e0a38
-timeCreated: 1517772135
+guid: 0a272e783e8ed5f458450184dce31a3b
+timeCreated: 1517771843
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -156,8 +156,8 @@ TextureImporter:
       name: objs-cenarioPrancheta-5_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1024
+        y: 513
         width: 512
         height: 511
       alignment: 0
