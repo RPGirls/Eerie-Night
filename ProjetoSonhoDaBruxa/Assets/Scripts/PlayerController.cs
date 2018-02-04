@@ -19,6 +19,8 @@ namespace Assets.Scripts
         private bool _canFlip;
         private MovementDirection _directions;
 
+		private Animator _anim;
+
         public void Awake()
         {
             if (Instance == null) //Check if instance already exists
@@ -30,6 +32,7 @@ namespace Assets.Scripts
 
         public void Start()
         {
+			_anim = this.gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
             _rb = transform.GetComponent<Rigidbody2D>();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
@@ -62,7 +65,7 @@ namespace Assets.Scripts
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
-                Debug.Log("Idle animation");
+				_anim.SetTrigger ("idle");
             }
 
         }
@@ -115,6 +118,7 @@ namespace Assets.Scripts
             if (_lastDirection != "S" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip baixo");
+				//_anim.SetTrigger ("walk");
                 _lastDirection = "S";
             }
         }
@@ -127,6 +131,7 @@ namespace Assets.Scripts
             if (_lastDirection != "W" && _canFlip)
             {
                 Debug.Log("Flip cima");
+				//_anim.SetTrigger ("idle");
                 _lastDirection = "W";
             }
         }
