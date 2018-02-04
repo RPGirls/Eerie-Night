@@ -49,7 +49,7 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
-            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || IsDead)
+            if (!_directions.Left || !_directions.Right || !_directions.Up || !_directions.Down || IsDead)
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
