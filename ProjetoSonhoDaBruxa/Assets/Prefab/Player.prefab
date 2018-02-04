@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 70355965261780648}
   - component: {fileID: 95835407960524614}
   - component: {fileID: 114477889415736254}
+  - component: {fileID: 82082728569163570}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -382,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1854413669133040
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732681267325932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -934,6 +935,86 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8313912, y: 2.011135}
   m_Direction: 0
+--- !u!82 &82082728569163570
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732681267325932}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f19885054d1336f4ca3e0fa8e835fa57, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95835407960524614
 Animator:
   serializedVersion: 3
@@ -1063,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5899999
+  m_Length: 0.58999985
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4052982583200364}
   m_AttachedIK: {fileID: 0}
@@ -1095,7 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4437649
+  m_Length: 0.44376454
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4686633774622824}
   m_AttachedIK: {fileID: 0}
@@ -1111,7 +1192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4779562
+  m_Length: 0.47795653
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4215552120664266}
   m_AttachedIK: {fileID: 0}
@@ -1127,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47493663
+  m_Length: 0.47493625
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4321112276885524}
   m_AttachedIK: {fileID: 0}
@@ -1143,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4735464
+  m_Length: 0.4735461
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4464003155858436}
   m_AttachedIK: {fileID: 0}
@@ -1237,7 +1318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.447781
+  m_Length: 0.44778073
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4906480421236090}
   m_AttachedIK: {fileID: 0}
@@ -1253,7 +1334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0600199
+  m_Length: 1.06002
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4657010600143420}
   m_AttachedIK: {fileID: 0}
@@ -1269,7 +1350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.57442665
+  m_Length: 0.5744271
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4458528565959638}
   m_AttachedIK: {fileID: 0}
@@ -1285,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.64184403
+  m_Length: 0.6418442
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4161910444143998}
   m_AttachedIK: {fileID: 0}
@@ -1301,7 +1382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4067827
+  m_Length: 0.40678257
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4066203331154654}
   m_AttachedIK: {fileID: 0}
@@ -1317,7 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.45704973
+  m_Length: 0.4570498
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4798947077238184}
   m_AttachedIK: {fileID: 0}
@@ -1333,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.40092096
+  m_Length: 0.40092105
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4970155080253602}
   m_AttachedIK: {fileID: 0}

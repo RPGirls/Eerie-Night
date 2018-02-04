@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9935dfb13ce77e04193585bb8c9e0a38
-timeCreated: 1517772135
+guid: 6b1b0f207d6553a4f88115c44c2c8559
+timeCreated: 1517771882
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -159,7 +159,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 512
-        height: 511
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,9 +170,9 @@ TextureImporter:
       name: objs-cenarioPrancheta-5_3
       rect:
         serializedVersion: 2
-        x: 512
+        x: 513
         y: 0
-        width: 512
+        width: 511
         height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,8 +184,8 @@ TextureImporter:
       name: objs-cenarioPrancheta-5_4
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
+        x: 512
+        y: 1024
         width: 512
         height: 512
       alignment: 0
