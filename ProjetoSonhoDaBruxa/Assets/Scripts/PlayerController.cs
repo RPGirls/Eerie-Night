@@ -18,14 +18,13 @@ namespace Assets.Scripts
 
         private Rigidbody2D _rb;
         private string _lastDirection;
-        private bool _canFlip;
         private MovementDirection _directions;
-
-		private Animator _anim;
+		private bool _afterPulling;
+        
 
         public static PlayerController Instance = null;
         private Vector3 _rebornPosition;
-        private bool _dead;
+        public bool IsDead;
 
         public void Awake()
         {
@@ -38,7 +37,6 @@ namespace Assets.Scripts
 
         public void Start()
         {
-			_anim = gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
             _rb = transform.GetComponent<Rigidbody2D>();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
@@ -51,26 +49,22 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
-            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || _dead)
+			if (_afterPulling)
+				return;
+			
+
+            if (!_directions.Left || !_directions.Right || !_directions.Up || !_directions.Down || IsDead)
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
             }
 
-            if(_dead)
+            if(IsDead)
                 return;
-
-            SetCanFlip();
-
+			
 			GetKeys();
 
             GetKeysUp();
-
-            
-
-            _anim.SetBool("IsWalking", IsMoving);
-            _anim.SetBool("Idle", !IsMoving);
-            _anim.SetBool("Power", BreakObjects.Instance.GetIfPressingButtonsToBreakObjects());
         }
 
         private void GetKeysUp()
@@ -83,22 +77,6 @@ namespace Assets.Scripts
                 _directions.Up = false;
             else if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
                 _directions.Down = false;
-        }
-
-        private void SetCanFlip()
-        {
-            if ((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) ||
-                 Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
-                ||
-                (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S) ||
-                 Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)))
-            {
-                _canFlip = false;
-            }
-            else
-            {
-                _canFlip = true;
-            }
         }
 
         private void GetKeys()
@@ -118,11 +96,7 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
-            if (_lastDirection != "S" && _canFlip && !IsPulling)
-            {
-                Debug.Log("Flip baixo");
-                _lastDirection = "S";
-            }
+           
         }
 
         private void GoingUp()
@@ -130,12 +104,7 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
-            if (_lastDirection != "W" && _canFlip)
-            {
-                Debug.Log("Flip cima");
-				//_anim.SetTrigger ("idle");
-                _lastDirection = "W";
-            }
+          
         }
 
         private void SetVelocityUpDown( Vector2 yVector)
@@ -151,11 +120,16 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
-            if (_lastDirection != "D" && _canFlip && !IsPulling)
+            if (_lastDirection != "D" && !IsPulling)
             {
-                Debug.Log("Flip direita");
+				if (transform.localScale.x > 0) {
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				}
                 _lastDirection = "D";
             }
+
+			//if (transform.localScale.x < 0 && IsPulling) 
+			//	transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
 
         private void GoingLeft()
@@ -163,12 +137,17 @@ namespace Assets.Scripts
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
-            if (_lastDirection != "A" && _canFlip && !IsPulling)
+            if (_lastDirection != "A" && !IsPulling)
             {
-                //Flip para esquerda
-                Debug.Log("Flip esquerda");
+				if (transform.localScale.x < 0) {
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				}
                 _lastDirection = "A";
             }
+
+			//if (transform.localScale.x > 0 && IsPulling) 
+				//transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			
         }
 
         private void SetVelocityLeftRight(Vector2 xVector)
@@ -181,41 +160,37 @@ namespace Assets.Scripts
 
         public void Die(Vector3 position)
         {
-            _anim.SetBool("Dead", true);
-            _dead = true;
+            IsDead = true;
+            IsMoving = false;
             _rebornPosition = position;
         }
 
         public void Reborn()
         {
-            StartCoroutine("SetDeadFalse");
-            _anim.SetBool("Dead", false);
+            IsDead = false;
             transform.position = _rebornPosition;
         }
 
-        private IEnumerator SetDeadFalse()
-        {
-            yield return new WaitForSeconds(TimeFrozenWhenRespawn);
-            _dead = false;
-        }
-
-
         public void ApplyForce()
 		{
+			_afterPulling = true;
 		    if (_directions.Up)
-                AddForce(Vector2.up);
+				StartCoroutine("AddForce", Vector2.up);
             if (_directions.Down)
-                AddForce(Vector2.down);
+				StartCoroutine("AddForce", Vector2.down);
             if (_directions.Right)
-                AddForce(Vector2.right);
+				StartCoroutine("AddForce", Vector2.right);
             if (_directions.Left)
-                AddForce(Vector2.left);
+				StartCoroutine("AddForce", Vector2.left);
         }
 
-        private void AddForce(Vector2 direction)
+        IEnumerator AddForce(Vector2 direction)
         {
-            Debug.Log("chamado");
-            gameObject.GetComponent<Rigidbody2D>().AddForce(direction * AcelerationForce, ForceMode2D.Impulse);
+			_rb.AddForce(direction * AcelerationForce, ForceMode2D.Impulse);
+
+			yield return new WaitForSeconds (.5f);
+
+			_afterPulling = false;
         }
 
         private struct MovementDirection

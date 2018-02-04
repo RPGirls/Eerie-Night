@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 91d193c271f69ee438438331a53544db
-timeCreated: 1517706665
+timeCreated: 1517748216
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -141,21 +141,7 @@ TextureImporter:
         width: 136
         height: 235
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_1
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 279
-        width: 29
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,7 +155,7 @@ TextureImporter:
         width: 69
         height: 179
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,21 +169,7 @@ TextureImporter:
         width: 162
         height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_4
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 230
-        width: 20
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,12 +178,12 @@ TextureImporter:
       name: broken_cage_5
       rect:
         serializedVersion: 2
-        x: 378
+        x: 344
         y: 96
-        width: 110
-        height: 180
+        width: 144
+        height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,7 +197,7 @@ TextureImporter:
         width: 129
         height: 138
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,75 +211,19 @@ TextureImporter:
         width: 111
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: broken_cage_8
+      name: broken_cage_4
       rect:
         serializedVersion: 2
-        x: 1367
-        y: 149
-        width: 37
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_9
-      rect:
-        serializedVersion: 2
-        x: 1402
-        y: 204
-        width: 11
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_10
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 179
-        width: 10
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_11
-      rect:
-        serializedVersion: 2
-        x: 1402
-        y: 182
-        width: 10
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_cage_12
-      rect:
-        serializedVersion: 2
-        x: 1425
-        y: 177
-        width: 30
-        height: 14
+        x: 1331
+        y: 146
+        width: 125
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

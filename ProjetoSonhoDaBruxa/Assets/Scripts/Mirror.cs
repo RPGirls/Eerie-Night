@@ -13,6 +13,7 @@ namespace Assets.Scripts
         public float WaitTimeForWin;
 
         public static Mirror Instance = null;
+        private bool _allObrsPlaced = false;
 
         public void Awake()
         {
@@ -22,12 +23,11 @@ namespace Assets.Scripts
                 Destroy(gameObject); //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
         }
 
-        public void OnTriggerEnter2D(Collider2D other)
+        public void Update()
         {
-            if (_objectCounter == NumberOfObjects)
+            if (_objectCounter == NumberOfObjects && _allObrsPlaced)
             {
                 StartCoroutine("WinCoroutine");
-                
             }
         }
 
@@ -46,6 +46,12 @@ namespace Assets.Scripts
         public int GetObjectCounter()
         {
             return _objectCounter;
+        }
+
+        public void CheckIfWin()
+        {
+            if (_objectCounter== NumberOfObjects)
+                _allObrsPlaced = true;
         }
     }
 }
