@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4161910444143998}
   - component: {fileID: 114881027905733274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: knee_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4083893783230206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rigg Bruxa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4657010600143420}
   - component: {fileID: 114912580041239558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4715399671608888}
   - component: {fileID: 114075694032170452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tighleg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906480421236090}
   - component: {fileID: 114774574747679390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arm_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4686633774622824}
   - component: {fileID: 114586435926535328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hand_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444334840951114}
   - component: {fileID: 212852897277967678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: orbfull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4638659949692514}
   - component: {fileID: 114394097260204654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shoulder_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4642483321524534}
   - component: {fileID: 114991002092885484}
   - component: {fileID: 137868986685621592}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: manabruxa 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4940182989882818}
   - component: {fileID: 114636084512602944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shoulder_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4473272412731558}
   - component: {fileID: 70701654529534776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyCollider
   m_TagString: EnemyCollider
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4321112276885524}
   - component: {fileID: 114840901596770964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elbow_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4458528565959638}
   - component: {fileID: 114557322848412938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hand_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797195562137104}
   - component: {fileID: 108234689928706616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970155080253602}
   - component: {fileID: 114013371508162030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4066203331154654}
   - component: {fileID: 114293201573154000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arm_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798947077238184}
   - component: {fileID: 114042768479771288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leg_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4763000217695524}
   - component: {fileID: 114334232242888076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 95835407960524614}
   - component: {fileID: 114477889415736254}
   - component: {fileID: 82082728569163570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4036576347515616}
   - component: {fileID: 114733796927239160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elbow_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4464003155858436}
   - component: {fileID: 114014754525733658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751485776215024}
   - component: {fileID: 114855911863722512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: knee_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4921830364398716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Luz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4426157783908430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4052982583200364}
   - component: {fileID: 114761274804682408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4215552120664266}
   - component: {fileID: 114411587944597136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4092225432676926}
   - component: {fileID: 114788070967919304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tighleg_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4548254134210466}
   - component: {fileID: 114050869227495646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732681267325932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.72, y: -11.52, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4426157783908430}
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   Light: {fileID: 108234689928706616}
   p: {fileID: 0}
   affectDistance: 10
-  ColorForInteraction: {r: 0, g: 0, b: 0, a: 0}
+  ColorForInteraction: {r: 0.29411766, g: 0.7607843, b: 0.94509804, a: 1}
 --- !u!114 &114042768479771288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5900003
+  m_Length: 0.58999985
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4052982583200364}
   m_AttachedIK: {fileID: 0}
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4437662
+  m_Length: 0.44376454
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4686633774622824}
   m_AttachedIK: {fileID: 0}
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47795743
+  m_Length: 0.47795653
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4215552120664266}
   m_AttachedIK: {fileID: 0}
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47493824
+  m_Length: 0.47493625
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4321112276885524}
   m_AttachedIK: {fileID: 0}
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47354507
+  m_Length: 0.4735461
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4464003155858436}
   m_AttachedIK: {fileID: 0}
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5364388
+  m_Length: 0.53644085
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4036576347515616}
   m_AttachedIK: {fileID: 0}
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.447781
+  m_Length: 0.44778073
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4906480421236090}
   m_AttachedIK: {fileID: 0}
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0600189
+  m_Length: 1.06002
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4657010600143420}
   m_AttachedIK: {fileID: 0}
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.57442755
+  m_Length: 0.5744271
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4458528565959638}
   m_AttachedIK: {fileID: 0}
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.6418431
+  m_Length: 0.6418442
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4161910444143998}
   m_AttachedIK: {fileID: 0}
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4067837
+  m_Length: 0.40678257
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4066203331154654}
   m_AttachedIK: {fileID: 0}
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.45704907
+  m_Length: 0.4570498
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4798947077238184}
   m_AttachedIK: {fileID: 0}
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.40092027
+  m_Length: 0.40092105
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4970155080253602}
   m_AttachedIK: {fileID: 0}
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.6605586
+  m_Length: 0.6605573
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4763000217695524}
   m_AttachedIK: {fileID: 0}
