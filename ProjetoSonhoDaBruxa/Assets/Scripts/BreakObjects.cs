@@ -86,7 +86,7 @@ namespace Assets.Scripts
 
         private void PressedEnoughTime(Collider2D col)
         {
-			makeParticlesFollow ();
+			//makeParticlesFollow ();
             _ready = false;
             BreakObject(col);
             _playerControl.IsPulling = false;
@@ -94,7 +94,7 @@ namespace Assets.Scripts
         }
 
 		// Codigo do cara que eu copiei
-		private void makeParticlesFollow (){
+		/*private void makeParticlesFollow (){
 			
 			float dist;
 			for (int i=0; i < particles.GetUpperBound(0))
@@ -105,7 +105,7 @@ namespace Assets.Scripts
 				}
 			}
 			p.particles = particles;
-		}
+		}*/
 
         private void StopParticle()
         {
