@@ -65,7 +65,7 @@ namespace Assets.Scripts
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
-				_anim.SetTrigger ("idle");
+				_anim.SetBool ("IsWalking", false);
             }
 
         }
@@ -115,10 +115,10 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "S" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip baixo");
-				//_anim.SetTrigger ("walk");
                 _lastDirection = "S";
             }
         }
@@ -128,6 +128,7 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "W" && _canFlip)
             {
                 Debug.Log("Flip cima");
@@ -149,6 +150,7 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "D" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip direita");
@@ -161,6 +163,7 @@ namespace Assets.Scripts
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "A" && _canFlip && !IsPulling)
             {
                 //Flip para esquerda
