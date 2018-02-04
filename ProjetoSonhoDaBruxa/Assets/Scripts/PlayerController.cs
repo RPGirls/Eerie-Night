@@ -20,6 +20,7 @@ namespace Assets.Scripts
         private string _lastDirection;
         private bool _canFlip;
         private MovementDirection _directions;
+		private bool _afterPulling;
         
 
         public static PlayerController Instance = null;
@@ -49,6 +50,10 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
+			if (_afterPulling)
+				return;
+			
+
             if (!_directions.Left || !_directions.Right || !_directions.Up || !_directions.Down || IsDead)
             {
                 IsMoving = false;
@@ -57,7 +62,7 @@ namespace Assets.Scripts
 
             if(IsDead)
                 return;
-
+			
             SetCanFlip();
 
 			GetKeys();
@@ -181,20 +186,24 @@ namespace Assets.Scripts
 
         public void ApplyForce()
 		{
+			_afterPulling = true;
 		    if (_directions.Up)
-                AddForce(Vector2.up);
+				StartCoroutine("AddForce", Vector2.up);
             if (_directions.Down)
-                AddForce(Vector2.down);
+				StartCoroutine("AddForce", Vector2.down);
             if (_directions.Right)
-                AddForce(Vector2.right);
+				StartCoroutine("AddForce", Vector2.right);
             if (_directions.Left)
-                AddForce(Vector2.left);
+				StartCoroutine("AddForce", Vector2.left);
         }
 
-        private void AddForce(Vector2 direction)
+        IEnumerator AddForce(Vector2 direction)
         {
-            Debug.Log("chamado");
-            gameObject.GetComponent<Rigidbody2D>().AddForce(direction * AcelerationForce, ForceMode2D.Impulse);
+			_rb.AddForce(direction * AcelerationForce, ForceMode2D.Impulse);
+
+			yield return new WaitForSeconds (.5f);
+
+			_afterPulling = false;
         }
 
         private struct MovementDirection
