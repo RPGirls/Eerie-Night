@@ -9,7 +9,7 @@ namespace Assets.Scripts
         public float SlowerPace = 0.5f;
 
         public float AcelerationForce;
-        public static PlayerController Instance = null;
+        
 
 		public bool IsPulling;
 		public bool IsMoving;
@@ -20,6 +20,8 @@ namespace Assets.Scripts
         private MovementDirection _directions;
 
 		private Animator _anim;
+
+        public static PlayerController Instance = null;
 
         public void Awake()
         {
@@ -32,7 +34,7 @@ namespace Assets.Scripts
 
         public void Start()
         {
-			_anim = this.gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
+			_anim = gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
             _rb = transform.GetComponent<Rigidbody2D>();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
@@ -51,23 +53,15 @@ namespace Assets.Scripts
 
             GetKeysUp();
 
-            //if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W)
-			//	|| Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) 
-			//	|| Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
-            //{
-			//	IsMoving = false;
-            //    _rb.velocity = new Vector2(0, 0);
-            //    // Trigger Idle
-            //    Debug.Log("Idle animation");
-            //}
-
             if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down)
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
-				_anim.SetBool ("IsWalking", false);
             }
 
+            _anim.SetBool("IsWalking", IsMoving);
+            _anim.SetBool("Idle", !IsMoving);
+            _anim.SetBool("Power", BreakObjects.Instance.GetIfPressingButtonsToBreakObjects());
         }
 
         private void GetKeysUp()
@@ -115,7 +109,6 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
-			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "S" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip baixo");
@@ -128,7 +121,6 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
-			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "W" && _canFlip)
             {
                 Debug.Log("Flip cima");
@@ -150,7 +142,6 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
-			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "D" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip direita");
@@ -163,7 +154,6 @@ namespace Assets.Scripts
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
-			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "A" && _canFlip && !IsPulling)
             {
                 //Flip para esquerda
@@ -208,6 +198,7 @@ namespace Assets.Scripts
             public bool Up, Down, Left, Right;
 
         }
+        
 
     }
 }
