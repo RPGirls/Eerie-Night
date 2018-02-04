@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 114041907562097388}
   - component: {fileID: 114747287747777798}
   - component: {fileID: 70701116812367700}
+  - component: {fileID: 95951425977419582}
   m_Layer: 0
   m_Name: Player_bruxa
   m_TagString: Player
@@ -562,14 +563,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1681388401822202}
-  m_LocalRotation: {x: 0, y: 0, z: -0.8043939, w: 0.5940964}
+  m_LocalRotation: {x: -0, y: -0, z: -0.8915236, w: 0.45297423}
   m_LocalPosition: {x: 0.7918185, y: -0.3133427, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4166964261336190}
   m_Father: {fileID: 4146751331396738}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -107.104004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -126.131004}
 --- !u!4 &4346631972904932
 Transform:
   m_ObjectHideFlags: 1
@@ -687,7 +688,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401937485557394}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.11183828, y: -0.33, z: 0}
+  m_LocalPosition: {x: -0.1118383, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4146751331396738}
@@ -827,6 +828,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.03336817, y: -0.41655505}
   m_Size: {x: 0.78289855, y: 1.0509372}
   m_Direction: 0
+--- !u!95 &95951425977419582
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293220645012584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 610cb87416abc234a9006b3e3bc6da64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108786159930915976
 Light:
   m_ObjectHideFlags: 1
@@ -992,7 +1010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44376534
+  m_Length: 0.443765
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4293464179015002}
   m_AttachedIK: {fileID: 0}
@@ -1024,7 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.53644115
+  m_Length: 0.5364407
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4166964261336190}
   m_AttachedIK: {fileID: 0}
@@ -1104,7 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.40092105
+  m_Length: 0.400921
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4377390271482474}
   m_AttachedIK: {fileID: 0}
@@ -1120,7 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5744279
+  m_Length: 0.57442766
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4346631972904932}
   m_AttachedIK: {fileID: 0}
@@ -1152,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47795668
+  m_Length: 0.47795656
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4189969688857108}
   m_AttachedIK: {fileID: 0}
@@ -1214,7 +1232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44778126
+  m_Length: 0.44778082
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4163691837064512}
   m_AttachedIK: {fileID: 0}
@@ -1246,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.40678257
+  m_Length: 0.40678272
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4811445659463430}
   m_AttachedIK: {fileID: 0}
@@ -1288,7 +1306,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 43373907837907230, guid: 42118c8cb4dae9a438df3f43b3ddc007, type: 2}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 4579681674146830}
   - {fileID: 4146751331396738}
