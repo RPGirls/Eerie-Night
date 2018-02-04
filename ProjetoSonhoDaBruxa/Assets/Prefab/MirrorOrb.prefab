@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198078246847780644}
   - component: {fileID: 199583878686815976}
   m_Layer: 0
-  m_Name: Particle_colocarorb 1
+  m_Name: MirrorOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

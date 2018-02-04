@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198537986591222934}
   - component: {fileID: 199833801075879146}
   m_Layer: 0
-  m_Name: Particle
+  m_Name: puxaluz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
