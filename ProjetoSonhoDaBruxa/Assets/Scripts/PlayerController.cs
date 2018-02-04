@@ -176,6 +176,7 @@ namespace Assets.Scripts
         public void Die(Vector3 position)
         {
             IsDead = true;
+            IsMoving = false;
             _rebornPosition = position;
         }
 
