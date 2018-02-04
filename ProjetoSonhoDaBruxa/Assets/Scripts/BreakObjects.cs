@@ -22,18 +22,24 @@ namespace Assets.Scripts
         private float _pressTime;
 		private PlayerController _playerControl;
         private bool _pressing;
+        public static BreakObjects Instance = null;
 
-		private Animator _anim;
+        public void Awake()
+        {
+            if (Instance == null) //Check if instance already exists
+                Instance = this; //if not, set instance to this
+            else if (Instance != this) //If instance already exists and it's not this:
+                Destroy(gameObject);
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+        }
 
         public void Start(){
-
-			//_anim = _playerControl.gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
 			_playerControl = PlayerController.Instance;
-			/*_tr = _playerControl.gameObject.transform;
+            /*_tr = _playerControl.gameObject.transform;
 			p = (ParticleEmitter)(GameObject.Find("Particle_colocarorb").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
 			_sqrDist = affectDistance*affectDistance;*/
-		}
+        }
 
         public void Update()
         {
@@ -63,7 +69,6 @@ namespace Assets.Scripts
         private void StillPressing()
         {
 			//makeParticlesFollow ();
-			//_anim.SetTrigger ("poder");
 			_startTime = Time.time;
             _pressTime = _startTime + HoldTime;
             _playerControl.IsPulling = true;
@@ -155,6 +160,10 @@ namespace Assets.Scripts
             return nearestCollider;
         }
 
+        public bool GetIfPressingButtonsToBreakObjects()
+        {
+            return _pressing;
+        }
 
         public void OnDrawGizmos() {
             Gizmos.color = Color.cyan;

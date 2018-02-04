@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,8 +21,10 @@ namespace Assets.Scripts
 
         public void EndGame()
         {
+            //StartCoroutine("EndGameCoroutine");
             PlayerController.Instance.SetPosition(SpawnPoint); //Se nao tiver coletado Respawn
         }
+        
 
         public void OnDrawGizmos()
         {

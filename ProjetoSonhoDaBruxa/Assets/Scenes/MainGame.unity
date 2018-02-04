@@ -611,12 +611,12 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: 91725887
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22587c01621e94f3db9060e85af093cb, type: 2}
@@ -938,8 +938,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 212857801952231920, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
+    - target: {fileID: 137562227869404870, guid: 161ba20f8b0f848509a515d76cc7cc1f,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1391109176 stripped
