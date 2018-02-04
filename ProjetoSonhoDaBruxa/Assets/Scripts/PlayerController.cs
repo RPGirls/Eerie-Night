@@ -128,7 +128,7 @@ namespace Assets.Scripts
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			} else {
 				if (_lastDirection != "D") {
-					if (transform.localScale.x > 0) {
+					if (transform.localScale.x > 0 && !Input.GetKey(KeyCode.Space)) {
 						transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 					}
 					_lastDirection = "D";
@@ -146,24 +146,11 @@ namespace Assets.Scripts
 				if (BreakableObjectPos.x > transform.position.x && transform.localScale.x > 0)
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			} else {
-				if (transform.localScale.x < 0) {
+				if (transform.localScale.x < 0 && !Input.GetKey(KeyCode.Space)) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				}
 				_lastDirection = "A";
 			}
-
-            /*if (_lastDirection != "A" && !IsPulling)
-            {
-				if (transform.localScale.x < 0) {
-					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-				}
-                _lastDirection = "A";
-            }
-
-			if (BreakableObjectPos.x > transform.position.x) {
-				if (transform.localScale.x > 0 && IsPulling)
-					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-			}*/
 
         }
 
