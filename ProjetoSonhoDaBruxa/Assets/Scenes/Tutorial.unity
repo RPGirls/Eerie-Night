@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanPressEnter: 1
-  GameSceneName: GDDD
+  GameSceneName: MainGame
 --- !u!1 &1876477591
 GameObject:
   m_ObjectHideFlags: 0
