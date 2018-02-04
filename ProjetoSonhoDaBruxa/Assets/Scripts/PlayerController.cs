@@ -110,11 +110,7 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
-           /* if (_lastDirection != "S" && _canFlip && !IsPulling)
-            {
-                //Debug.Log("Flip baixo");
-                _lastDirection = "S";
-            }*/
+           
         }
 
         private void GoingUp()
@@ -122,12 +118,7 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
-          /*  if (_lastDirection != "W" && _canFlip)
-            {
-                //Debug.Log("Flip cima");
-				//_anim.SetTrigger ("idle");
-                _lastDirection = "W";
-            }*/
+          
         }
 
         private void SetVelocityUpDown( Vector2 yVector)
@@ -148,7 +139,6 @@ namespace Assets.Scripts
 				if (transform.localScale.x > 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				}
-                //Debug.Log("Flip direita");
                 _lastDirection = "D";
             }
         }
@@ -163,7 +153,6 @@ namespace Assets.Scripts
 				if (transform.localScale.x < 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				}
-                //Flip para esquerda
                 Debug.Log("Flip esquerda");
                 _lastDirection = "A";
             }

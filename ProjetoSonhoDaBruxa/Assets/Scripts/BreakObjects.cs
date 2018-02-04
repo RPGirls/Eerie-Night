@@ -35,10 +35,10 @@ namespace Assets.Scripts
 
         public void Start(){
 			_playerControl = PlayerController.Instance;
-            /*_tr = _playerControl.gameObject.transform;
-			p = (ParticleEmitter)(GameObject.Find("Particle_colocarorb").GetComponent(typeof(ParticleEmitter)));
+            _tr = _playerControl.gameObject.transform;
+			p = (ParticleEmitter)(GameObject.Find("puxaluz (1)").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
-			_sqrDist = affectDistance*affectDistance;*/
+			_sqrDist = affectDistance*affectDistance;
         }
 
         public void Update()
@@ -68,7 +68,6 @@ namespace Assets.Scripts
 
         private void StillPressing()
         {
-			//makeParticlesFollow ();
 			_startTime = Time.time;
             _pressTime = _startTime + HoldTime;
             _playerControl.IsPulling = true;
@@ -87,6 +86,7 @@ namespace Assets.Scripts
 
         private void PressedEnoughTime(Collider2D col)
         {
+			makeParticlesFollow ();
             _ready = false;
             BreakObject(col);
             _playerControl.IsPulling = false;
@@ -94,7 +94,7 @@ namespace Assets.Scripts
         }
 
 		// Codigo do cara que eu copiei
-		/*private void makeParticlesFollow (){
+		private void makeParticlesFollow (){
 			
 			float dist;
 			for (int i=0; i < particles.GetUpperBound(0))
@@ -105,7 +105,7 @@ namespace Assets.Scripts
 				}
 			}
 			p.particles = particles;
-		}*/
+		}
 
         private void StopParticle()
         {
