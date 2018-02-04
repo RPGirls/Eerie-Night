@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using 
 
 namespace Assets.Scripts
 {
@@ -10,7 +11,6 @@ namespace Assets.Scripts
         private Vector3 _currentWaypoint;
         private int _pointsIterator = 0;
         private bool _changedWaypoint = false;
-
 
         public void Start()
         {
@@ -30,15 +30,19 @@ namespace Assets.Scripts
             var distCovered = (Time.time - _startTime) * Speed; // Distance moved = time * speed.
             var fracJourney = distCovered / journeyLength; // Fraction of journey completed = current distance divided by total distance.
             
-            transform.position = Vector3.Lerp(transform.position, _currentWaypoint, 1/Speed);
+			transform.position = Vector3.MoveTowards(transform.position, _currentWaypoint, Time.deltaTime * Speed);
+
             _changedWaypoint = false;
         }
 
         private void ChangeWayPoint()
         {
             _pointsIterator ++;
-            if (_pointsIterator == Points.Length)
-                _pointsIterator = 0;
+			if (_pointsIterator == Points.Length) {
+				_pointsIterator = 1;
+				System.Array.Reverse (Points);
+
+			}
             _currentWaypoint = Points[_pointsIterator];
         }
 
