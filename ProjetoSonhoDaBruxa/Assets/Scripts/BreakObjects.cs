@@ -35,10 +35,10 @@ namespace Assets.Scripts
 
         public void Start(){
 			_playerControl = PlayerController.Instance;
-            _tr = _playerControl.gameObject.transform;
+           /* _tr = _playerControl.gameObject.transform;
 			p = (ParticleEmitter)(GameObject.Find("puxaluz (1)").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
-			_sqrDist = affectDistance*affectDistance;
+			_sqrDist = affectDistance*affectDistance;*/
         }
 
         public void Update()
