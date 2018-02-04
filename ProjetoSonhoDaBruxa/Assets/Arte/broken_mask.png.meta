@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 61efb1624f7f56a49b66e4ccee8dcbf4
-timeCreated: 1517748319
+guid: c571df4cb63a352458d04de847df226f
+timeCreated: 1517748340
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: broken_manequim_0
-    21300002: broken_manequim_1
-    21300004: broken_manequim_2
-    21300006: broken_manequim_3
-    21300008: broken_manequim_4
-    21300010: broken_manequim_5
-    21300012: broken_manequim_6
+    21300000: broken_mask_0
+    21300002: broken_mask_1
+    21300004: broken_mask_2
+    21300006: broken_mask_3
+    21300008: broken_mask_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -103,109 +101,75 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: broken_manequim_0
+      name: broken_mask_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 38
-        width: 129
-        height: 120
+        x: 133
+        y: 16
+        width: 80
+        height: 83
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: broken_manequim_1
+      name: broken_mask_1
       rect:
         serializedVersion: 2
-        x: 215
-        y: 27
-        width: 113
-        height: 121
+        x: 143
+        y: 95
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: broken_manequim_2
+      name: broken_mask_2
       rect:
         serializedVersion: 2
-        x: 368
-        y: 34
-        width: 109
-        height: 106
+        x: 242
+        y: 10
+        width: 62
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: broken_manequim_3
+      name: broken_mask_3
       rect:
         serializedVersion: 2
-        x: 499
-        y: 25
+        x: 0
+        y: 0
         width: 112
-        height: 123
+        height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: broken_manequim_4
+      name: broken_mask_4
       rect:
         serializedVersion: 2
-        x: 633
-        y: 43
-        width: 96
-        height: 105
+        x: 318
+        y: 24
+        width: 77
+        height: 59
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: broken_manequim_6
-      rect:
-        serializedVersion: 2
-        x: 787
-        y: 58
-        width: 83
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
