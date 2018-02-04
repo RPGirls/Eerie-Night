@@ -23,7 +23,7 @@ namespace Assets.Scripts
 		private PlayerController _playerControl;
         private bool _pressing;
         public static BreakObjects Instance = null;
-        private Color ColorForInteraction;
+        public Color ColorForInteraction;
         private Color _originalColor;
 
         public void Awake()
