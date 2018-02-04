@@ -50,8 +50,8 @@ namespace Assets.Scripts
 
             if (Input.GetKey(KeyCode.Space) && _playerControl.IsMoving && _ready == false && col != null && !_pressing)
             {
-                _pressing = true;
-                StillPressing();
+				_pressing = true;
+				StillPressing();
             }
 			if (Input.GetKeyUp(KeyCode.Space) || !_playerControl.IsMoving || col == null)
             {
@@ -136,7 +136,7 @@ namespace Assets.Scripts
 
         private void BreakObject(Collider2D col)
         {
-            Mirror.Instance.AddBrokenObject();
+            Mirror.Instance.AddBrokenObject(col.gameObject);
             col.GetComponent<BreakableObject>().BreakObject();
         }
 
@@ -155,6 +155,7 @@ namespace Assets.Scripts
                 {
                     minSqrDistance = sqrDistanceToCenter;
                     nearestCollider = col;
+					_playerControl.BreakableObjectPos = col.transform.position;
                 }
             }
             return nearestCollider;

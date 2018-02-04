@@ -8,6 +8,7 @@ namespace Assets.Scripts
         {
             if (other.tag == "EnemyCollider")
             {
+                Mirror.Instance.DecreaseBrokenObjectsWhenDie();
                 RespawnPlayer.Instance.EndGame();
             }
         }
