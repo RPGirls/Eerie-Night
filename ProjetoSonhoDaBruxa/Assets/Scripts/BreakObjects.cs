@@ -138,8 +138,9 @@ namespace Assets.Scripts
 
         private void BreakObject(Collider2D col)
         {
-            Mirror.Instance.AddBrokenObject(col.gameObject);
-            col.GetComponent<BreakableObject>().BreakObject();
+            var breakable = col.GetComponent<BreakableObject>();
+            Mirror.Instance.AddBrokenObject(breakable);
+            breakable.BreakObject();
 			moveLightBall(col.gameObject);
 			// libera a bola de luz até o player
         }
