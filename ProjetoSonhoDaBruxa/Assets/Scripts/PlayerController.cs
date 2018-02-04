@@ -116,7 +116,7 @@ namespace Assets.Scripts
 
             if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W)
 				|| Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) 
-				|| Input.GetKeyUp(KeyCode.UpArrow || Input.GetKeyUp(KeyCode.DownArrow))
+				|| Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
             {
 				IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
@@ -134,18 +134,18 @@ namespace Assets.Scripts
 		public void ApplyForce(){
 			switch (_lastDirection) {
 			case "A":
-
+				break;
 			case "S":
-
+				break;
 			case "W":
-
+				break;
 			case "D":
-
+				break;
 
 			}
 
 
-			gameObject.GetComponent<Rigidbody2D>().AddForce()
+			//gameObject.GetComponent<Rigidbody2D>().AddForce()
 
 		}
 
