@@ -14,19 +14,12 @@ namespace Assets.Scripts
 
         public GameObject CloseToMirror;
         public GameObject FarFromMirror;
-
-        public void Start()
-        {
-            CloseToMirror.SetActive(true);
-            FarFromMirror.SetActive(false);
-        }
-
+        
         public void OnTriggerEnter2D(Collider2D other){
 
             if (other.tag == "Player") {
                 // Trigger close to mirror
-                CloseToMirror.SetActive(true);
-                FarFromMirror.SetActive(false);
+                TriggerCloseToMirror();
                 //Trigger orbs
                 var orbsCollected = Mirror.Instance.GetObjectCounter();
                _difference = orbsCollected - _orbsCounter;
@@ -35,6 +28,17 @@ namespace Assets.Scripts
         }
 
         public void OnTriggerExit2D(Collider2D other)
+        {
+            TriggerFarFromMirror();
+        }
+
+        private void TriggerCloseToMirror()
+        {
+            CloseToMirror.SetActive(true);
+            FarFromMirror.SetActive(false);
+        }
+
+        private void TriggerFarFromMirror()
         {
             CloseToMirror.SetActive(false);
             FarFromMirror.SetActive(true);
