@@ -69,6 +69,7 @@ namespace Assets.Scripts
             _ready = false;
             BreakObject(col);
             _playerControl.IsPulling = false;
+			_playerControl.ApplyForce ();
         }
 
         private void StopParticle()
