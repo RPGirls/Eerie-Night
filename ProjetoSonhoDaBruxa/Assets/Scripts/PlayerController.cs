@@ -19,6 +19,8 @@ namespace Assets.Scripts
         private bool _canFlip;
         private MovementDirection _directions;
 
+		private Animator _anim;
+
         public void Awake()
         {
             if (Instance == null) //Check if instance already exists
@@ -30,6 +32,7 @@ namespace Assets.Scripts
 
         public void Start()
         {
+			_anim = this.gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
             _rb = transform.GetComponent<Rigidbody2D>();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
@@ -62,7 +65,7 @@ namespace Assets.Scripts
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
-                Debug.Log("Idle animation");
+				_anim.SetBool ("IsWalking", false);
             }
 
         }
@@ -112,6 +115,7 @@ namespace Assets.Scripts
             _directions.Down = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.down);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "S" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip baixo");
@@ -124,9 +128,11 @@ namespace Assets.Scripts
             _directions.Up = true;
             IsMoving = true;
             SetVelocityUpDown(Vector2.up);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "W" && _canFlip)
             {
                 Debug.Log("Flip cima");
+				//_anim.SetTrigger ("idle");
                 _lastDirection = "W";
             }
         }
@@ -144,6 +150,7 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "D" && _canFlip && !IsPulling)
             {
                 Debug.Log("Flip direita");
@@ -156,6 +163,7 @@ namespace Assets.Scripts
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
+			_anim.SetBool ("IsWalking", true);
             if (_lastDirection != "A" && _canFlip && !IsPulling)
             {
                 //Flip para esquerda
