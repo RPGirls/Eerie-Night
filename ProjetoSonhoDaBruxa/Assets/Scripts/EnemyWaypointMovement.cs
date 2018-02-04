@@ -40,8 +40,7 @@ namespace Assets.Scripts
 			if (_pointsIterator == Points.Length) {
 				_pointsIterator = 1;
 				System.Array.Reverse (Points);
-				transform.Rotate (0, 180, 0);
-
+				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			}
             _currentWaypoint = Points[_pointsIterator];
         }
