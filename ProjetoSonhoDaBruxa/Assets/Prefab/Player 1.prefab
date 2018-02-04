@@ -877,7 +877,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1144592184922662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.79, y: -1.71, z: 0}
+  m_LocalPosition: {x: -9.64, y: 11.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4137289197262944}
@@ -1297,9 +1297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPace: 4
-  SlowerPace: 0.2
+  SlowerPace: 0.3
   TimeFrozenWhenRespawn: 0
-  AcelerationForce: 6
+  AcelerationForce: 10
   IsPulling: 0
   IsMoving: 0
   IsDead: 0
