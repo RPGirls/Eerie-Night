@@ -35,8 +35,8 @@ namespace Assets.Scripts
 
         public void Start(){
 			_playerControl = PlayerController.Instance;
-            /*_tr = _playerControl.gameObject.transform;
-			p = (ParticleEmitter)(GameObject.Find("Particle_colocarorb").GetComponent(typeof(ParticleEmitter)));
+           /* _tr = _playerControl.gameObject.transform;
+			p = (ParticleEmitter)(GameObject.Find("puxaluz (1)").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
 			_sqrDist = affectDistance*affectDistance;*/
         }
@@ -53,7 +53,7 @@ namespace Assets.Scripts
                 _pressing = true;
                 StillPressing();
             }
-            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S) || col == null)
+			if (Input.GetKeyUp(KeyCode.Space) || !_playerControl.IsMoving || col == null)
             {
                 _pressing = false;
                 StoppedPressing();
@@ -68,7 +68,6 @@ namespace Assets.Scripts
 
         private void StillPressing()
         {
-			//makeParticlesFollow ();
 			_startTime = Time.time;
             _pressTime = _startTime + HoldTime;
             _playerControl.IsPulling = true;
@@ -87,6 +86,7 @@ namespace Assets.Scripts
 
         private void PressedEnoughTime(Collider2D col)
         {
+			//makeParticlesFollow ();
             _ready = false;
             BreakObject(col);
             _playerControl.IsPulling = false;
