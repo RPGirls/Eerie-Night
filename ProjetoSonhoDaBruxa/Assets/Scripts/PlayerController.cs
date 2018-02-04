@@ -16,6 +16,8 @@ namespace Assets.Scripts
 		public bool IsPulling;
 		public bool IsMoving;
 
+		public Vector3 BreakableObjectPos;
+
         private Rigidbody2D _rb;
         private string _lastDirection;
         private MovementDirection _directions;
@@ -120,24 +122,37 @@ namespace Assets.Scripts
             _directions.Right = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.right);
-            if (_lastDirection != "D" && !IsPulling)
-            {
-				if (transform.localScale.x > 0) {
-					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-				}
-                _lastDirection = "D";
-            }
 
-			//if (transform.localScale.x < 0 && IsPulling) 
-			//	transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
+			if (IsPulling) {
+				if (BreakableObjectPos.x < transform.position.x && transform.localScale.x < 0) 
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			} else {
+				if (_lastDirection != "D") {
+					if (transform.localScale.x > 0) {
+						transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+					}
+					_lastDirection = "D";
+				}
+			}
+		}
 
         private void GoingLeft()
         {
             _directions.Left = true;
             IsMoving = true;
             SetVelocityLeftRight(Vector2.left);
-            if (_lastDirection != "A" && !IsPulling)
+
+			if (IsPulling) {
+				if (BreakableObjectPos.x > transform.position.x && transform.localScale.x > 0)
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			} else {
+				if (transform.localScale.x < 0) {
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				}
+				_lastDirection = "A";
+			}
+
+            /*if (_lastDirection != "A" && !IsPulling)
             {
 				if (transform.localScale.x < 0) {
 					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
@@ -145,9 +160,11 @@ namespace Assets.Scripts
                 _lastDirection = "A";
             }
 
-			//if (transform.localScale.x > 0 && IsPulling) 
-				//transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-			
+			if (BreakableObjectPos.x > transform.position.x) {
+				if (transform.localScale.x > 0 && IsPulling)
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			}*/
+
         }
 
         private void SetVelocityLeftRight(Vector2 xVector)
