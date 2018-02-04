@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private int _objectsToCollect = 0;
 
         [SerializeField]
-        private List<GameObject> _brokenObjectsList = new List<GameObject>();
+        private List<BreakableObject> _brokenObjectsList = new List<BreakableObject>();
         public float WaitTimeForWin;
 
         public static Mirror Instance = null;
@@ -43,7 +43,7 @@ namespace Assets.Scripts
             SceneManager.LoadScene(WinLevel); // Se tiver tudo coletado vai pra tela final
         }
 
-        public void AddBrokenObject(GameObject obj)
+        public void AddBrokenObject(BreakableObject obj)
         {
             _objectsToCollect++;
             _objectsCollectedCounter ++;
@@ -62,6 +62,10 @@ namespace Assets.Scripts
 
         public void ResetObjectsToCollect()
         {
+            foreach (var breakableObject in _brokenObjectsList)
+            {
+                breakableObject.ResetObject();
+            }
             _objectsToCollect = 0;
         }
 
