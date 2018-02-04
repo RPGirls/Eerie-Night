@@ -7,6 +7,7 @@ namespace Assets.Scripts
     {
         private bool _isActive = false;
         public static Pause Instance = null;
+        private float _timeScale;
 
         public void Awake()
         {
@@ -23,11 +24,14 @@ namespace Assets.Scripts
             {
                 SceneManager.UnloadSceneAsync("Pause");
                 _isActive = false;
+                Time.timeScale = _timeScale;
             }
             else
             {
                 SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
                 _isActive = true;
+                _timeScale = Time.timeScale;
+                Time.timeScale = 0f;
             }
         }
 

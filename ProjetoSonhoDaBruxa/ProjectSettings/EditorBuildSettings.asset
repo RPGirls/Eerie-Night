@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 4b35472d4730d4c13b48422e8e4b9571
   - enabled: 1
-    path: Assets/Scenes/GDDD.unity
-    guid: f675127a6a6e62545a789f66e4fe15f4
-  - enabled: 1
     path: Assets/Scenes/MainGame.unity
+    guid: f675127a6a6e62545a789f66e4fe15f4
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/ae0218c1a3890714d89c160050c0931c
     guid: ae0218c1a3890714d89c160050c0931c
   - enabled: 1
     path: Assets/Scenes/WinScene.unity

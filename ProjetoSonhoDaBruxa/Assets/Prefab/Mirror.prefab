@@ -741,7 +741,7 @@ MonoBehaviour:
   WinLevel: WinScene
   NumberOfObjectsToWin: 4
   _objectsCollectedCounter: 0
-  _objectsToCollect: 4
+  _objectsToCollect: 0
   _brokenObjectsList: []
   WaitTimeForWin: 1
 --- !u!114 &114767769099667606
