@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactive
   - Wall
+  - EnemyCollider
   layers:
   - Default
   - TransparentFX
