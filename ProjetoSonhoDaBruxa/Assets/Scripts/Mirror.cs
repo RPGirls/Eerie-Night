@@ -39,6 +39,7 @@ namespace Assets.Scripts
         private IEnumerator WinCoroutine()
         {
             Debug.Log("Ganhou");
+			GetComponent<AudioSource> ().Play ();
             yield return new WaitForSeconds(WaitTimeForWin == 0 ? 0.4f : WaitTimeForWin);
             SceneManager.LoadScene(WinLevel); // Se tiver tudo coletado vai pra tela final
         }
