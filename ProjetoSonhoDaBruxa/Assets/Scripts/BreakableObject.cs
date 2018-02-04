@@ -4,11 +4,13 @@ namespace Assets.Scripts
 {
     [RequireComponent(typeof(Animator))]
     public class BreakableObject : MonoBehaviour {
-        
+	        
         private Animator _anim;
+		private AudioSource _audioSource;
 
         public void Start()
         {
+			_audioSource = GetComponent<AudioSource> ();
             _anim = GetComponent<Animator>();
         }
 
@@ -16,6 +18,7 @@ namespace Assets.Scripts
         {
             if(_anim != null)
                 _anim.SetBool("Broken", true);
+			_audioSource.Play ();
             GetComponent<Collider2D>().enabled = false;
             tag = "Untagged";
         }

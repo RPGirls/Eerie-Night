@@ -164,6 +164,7 @@ namespace Assets.Scripts
 
         public void Die(Vector3 position)
         {
+			GetComponent<AudioSource> ().Play ();
             IsDead = true;
             IsMoving = false;
             _rebornPosition = position;
