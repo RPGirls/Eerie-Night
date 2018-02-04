@@ -115,7 +115,8 @@ namespace Assets.Scripts
             }
 
             if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W)
-				|| Input.GetKeyUp(KeyCode.S) || Input.GetKey(KeyCode.LeftArrow))
+				|| Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) 
+				|| Input.GetKeyUp(KeyCode.UpArrow || Input.GetKeyUp(KeyCode.DownArrow))
             {
 				IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
