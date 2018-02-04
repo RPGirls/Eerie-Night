@@ -1652,17 +1652,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1144592184922662, guid: 27ca9d82e3e139b44bde3e0179826ddb,
     type: 2}
   m_PrefabInternal: {fileID: 1166799812}
---- !u!114 &735508542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 735508535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc9ad9592a2aa04a91576b801bd1cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &749565282 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4124458065327592, guid: 96f2738be80b0f54e85a9ac63a7ede95,
@@ -2083,14 +2072,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1144592184922662, guid: 27ca9d82e3e139b44bde3e0179826ddb, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 137262547876766664, guid: 27ca9d82e3e139b44bde3e0179826ddb,
         type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144592184922662, guid: 27ca9d82e3e139b44bde3e0179826ddb, type: 2}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27ca9d82e3e139b44bde3e0179826ddb, type: 2}
