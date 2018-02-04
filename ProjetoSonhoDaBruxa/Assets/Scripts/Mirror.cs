@@ -58,15 +58,16 @@ namespace Assets.Scripts
 
         public void DecreaseBrokenObjectsWhenDie()
         {
+            foreach (var breakableObject in _brokenObjectsList)
+            {
+                breakableObject.ResetObject();
+            }
             _objectsCollectedCounter = _objectsCollectedCounter - _objectsToCollect;
         }
 
         public void ResetObjectsToCollect()
         {
-            foreach (var breakableObject in _brokenObjectsList)
-            {
-                breakableObject.ResetObject();
-            }
+            _brokenObjectsList.Clear();
             _objectsToCollect = 0;
         }
 

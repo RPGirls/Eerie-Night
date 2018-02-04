@@ -23,6 +23,8 @@ namespace Assets.Scripts
 		private PlayerController _playerControl;
         private bool _pressing;
         public static BreakObjects Instance = null;
+        public Color ColorForInteraction;
+        private Color _originalColor;
 
         public void Awake()
         {
@@ -33,8 +35,10 @@ namespace Assets.Scripts
             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
         }
 
-        public void Start(){
-			_playerControl = PlayerController.Instance;
+        public void Start()
+        {
+            _originalColor = Light.color;
+            _playerControl = PlayerController.Instance;
            /* _tr = _playerControl.gameObject.transform;
 			p = (ParticleEmitter)(GameObject.Find("puxaluz (1)").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
@@ -119,12 +123,12 @@ namespace Assets.Scripts
 
         private void ShowLight()
         {
-            Light.color = Color.red;
+            Light.color = ColorForInteraction;
         }
 
         private void EndLight()
         {
-            Light.color = Color.white;
+            Light.color = _originalColor;
         }
 
         private void FindObjectAndBreak()
