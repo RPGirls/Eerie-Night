@@ -11,15 +11,28 @@ namespace Assets.Scripts
 
         public Light Light;
 
+		public ParticleEmitter p;
+		public Particle[] particles;
+		public float affectDistance = 10.0f;
+		private float _sqrDist;
+		private Transform _tr;
+
         private float _startTime = 0f;
         private bool _ready;
         private float _pressTime;
 		private PlayerController _playerControl;
         private bool _pressing;
 
+		private Animator _anim;
+
         public void Start(){
 
+			//_anim = _playerControl.gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
 			_playerControl = PlayerController.Instance;
+			/*_tr = _playerControl.gameObject.transform;
+			p = (ParticleEmitter)(GameObject.Find("Particle_colocarorb").GetComponent(typeof(ParticleEmitter)));
+			particles = p.particles;
+			_sqrDist = affectDistance*affectDistance;*/
 		}
 
         public void Update()
@@ -49,7 +62,9 @@ namespace Assets.Scripts
 
         private void StillPressing()
         {
-            _startTime = Time.time;
+			//makeParticlesFollow ();
+			//_anim.SetTrigger ("poder");
+			_startTime = Time.time;
             _pressTime = _startTime + HoldTime;
             _playerControl.IsPulling = true;
             _ready = true;
@@ -72,6 +87,20 @@ namespace Assets.Scripts
             _playerControl.IsPulling = false;
 			_playerControl.ApplyForce ();
         }
+
+		// Codigo do cara que eu copiei
+		/*private void makeParticlesFollow (){
+			
+			float dist;
+			for (int i=0; i < particles.GetUpperBound(0))
+			{
+				dist = Vector3.SqrMagnitude(_tr.position - particles[i].position);
+				if (dist < _sqrDist) {
+					particles[i].position = Vector3.Lerp(particles[i].position,transform.position,Time.deltaTime / 2.0f);
+				}
+			}
+			p.particles = particles;
+		}*/
 
         private void StopParticle()
         {
