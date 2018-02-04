@@ -145,7 +145,9 @@ namespace Assets.Scripts
             SetVelocityLeftRight(Vector2.right);
             if (_lastDirection != "D" && _canFlip && !IsPulling)
             {
-				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				if (transform.localScale.x > 0) {
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				}
                 //Debug.Log("Flip direita");
                 _lastDirection = "D";
             }
@@ -158,7 +160,9 @@ namespace Assets.Scripts
             SetVelocityLeftRight(Vector2.left);
             if (_lastDirection != "A" && _canFlip && !IsPulling)
             {
-				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				if (transform.localScale.x < 0) {
+					transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				}
                 //Flip para esquerda
                 Debug.Log("Flip esquerda");
                 _lastDirection = "A";
