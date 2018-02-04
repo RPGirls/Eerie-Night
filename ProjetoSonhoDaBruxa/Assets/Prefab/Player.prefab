@@ -1122,6 +1122,8 @@ MonoBehaviour:
   Radius: 2.73
   HoldTime: 2.5
   Light: {fileID: 108264254599922814}
+  p: {fileID: 0}
+  affectDistance: 10
 --- !u!114 &114735545385652504
 MonoBehaviour:
   m_ObjectHideFlags: 1
