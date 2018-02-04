@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 61799516499422348}
   - component: {fileID: 114767769099667606}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
