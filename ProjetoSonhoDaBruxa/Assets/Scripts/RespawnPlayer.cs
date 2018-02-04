@@ -21,8 +21,7 @@ namespace Assets.Scripts
 
         public void EndGame()
         {
-            //StartCoroutine("EndGameCoroutine");
-            PlayerController.Instance.SetPosition(SpawnPoint); //Se nao tiver coletado Respawn
+            PlayerController.Instance.Die(SpawnPoint); //Se nao tiver coletado Respawn
         }
         
 
