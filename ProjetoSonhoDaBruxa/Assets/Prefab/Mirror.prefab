@@ -739,9 +739,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinLevel: WinScene
-  NumberOfObjects: 3
-  _objectCounter: 0
-  WaitTimeForWin: 0.5
+  NumberOfObjectsToWin: 4
+  _objectsCollectedCounter: 0
+  _objectsToCollect: 4
+  _brokenObjectsList: []
+  WaitTimeForWin: 1
 --- !u!114 &114767769099667606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14554,7 +14556,7 @@ ParticleSystem:
   moveWithTransform: 2
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1639941193
+  randomSeed: 953367180
   InitialModule:
     serializedVersion: 3
     enabled: 1

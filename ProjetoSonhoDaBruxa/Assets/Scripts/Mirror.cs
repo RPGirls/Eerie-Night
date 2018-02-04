@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,10 +7,14 @@ namespace Assets.Scripts
 {
     public class Mirror : MonoBehaviour {
         public string WinLevel;
-        public int NumberOfObjects;
+        public int NumberOfObjectsToWin;
         [SerializeField]
-        private int _objectCounter = 0;
+        private int _objectsCollectedCounter = 0;
+        [SerializeField]
+        private int _objectsToCollect = 0;
 
+        [SerializeField]
+        private List<GameObject> _brokenObjectsList = new List<GameObject>();
         public float WaitTimeForWin;
 
         public static Mirror Instance = null;
@@ -25,7 +30,7 @@ namespace Assets.Scripts
 
         public void Update()
         {
-            if (_objectCounter == NumberOfObjects && _allObrsPlaced)
+            if (_objectsCollectedCounter == NumberOfObjectsToWin && _allObrsPlaced)
             {
                 StartCoroutine("WinCoroutine");
             }
@@ -38,19 +43,31 @@ namespace Assets.Scripts
             SceneManager.LoadScene(WinLevel); // Se tiver tudo coletado vai pra tela final
         }
 
-        public void AddBrokenObject()
+        public void AddBrokenObject(GameObject obj)
         {
-            _objectCounter ++;
+            _objectsToCollect++;
+            _objectsCollectedCounter ++;
+            _brokenObjectsList.Add(obj);
         }
 
         public int GetObjectCounter()
         {
-            return _objectCounter;
+            return _objectsCollectedCounter;
+        }
+
+        public void DecreaseBrokenObjectsWhenDie()
+        {
+            _objectsCollectedCounter = _objectsCollectedCounter - _objectsToCollect;
+        }
+
+        public void ResetObjectsToCollect()
+        {
+            _objectsToCollect = 0;
         }
 
         public void CheckIfWin()
         {
-            if (_objectCounter== NumberOfObjects)
+            if (_objectsCollectedCounter== NumberOfObjectsToWin)
                 _allObrsPlaced = true;
         }
     }

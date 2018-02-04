@@ -24,6 +24,8 @@ namespace Assets.Scripts
                 var orbsCollected = Mirror.Instance.GetObjectCounter();
                _difference = orbsCollected - _orbsCounter;
                 StartCoroutine("StartOrbs");
+                // Reset Objects To collect
+                Mirror.Instance.ResetObjectsToCollect();
             }
         }
 

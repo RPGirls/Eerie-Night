@@ -136,7 +136,7 @@ namespace Assets.Scripts
 
         private void BreakObject(Collider2D col)
         {
-            Mirror.Instance.AddBrokenObject();
+            Mirror.Instance.AddBrokenObject(col.gameObject);
             col.GetComponent<BreakableObject>().BreakObject();
         }
 
