@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 212766574094029450}
   - component: {fileID: 61590253559290440}
   - component: {fileID: 95450629791325190}
+  - component: {fileID: 114315483652737350}
   m_Layer: 0
   m_Name: InteractiveObject_mask
   m_TagString: Untagged
@@ -204,6 +205,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114315483652737350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1380945597426046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24f2950f935812468cbf2215ac68dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrokenObject: {fileID: 0}
 --- !u!212 &212116858984879584
 SpriteRenderer:
   m_ObjectHideFlags: 1
