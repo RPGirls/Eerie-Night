@@ -58,6 +58,7 @@ namespace Assets.Scripts
 
         public void DecreaseBrokenObjectsWhenDie()
         {
+            _brokenObjectsList = new List<BreakableObject>();
             _objectsCollectedCounter = _objectsCollectedCounter - _objectsToCollect;
         }
 
