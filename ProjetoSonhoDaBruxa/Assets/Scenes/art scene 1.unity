@@ -5127,7 +5127,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 224943713
+  randomSeed: -474713291
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9601,6 +9601,7 @@ MonoBehaviour:
   AcelerationForce: 0
   IsPulling: 0
   IsMoving: 0
+  BreakableObjectPos: {x: 0, y: 0, z: 0}
   IsDead: 0
 --- !u!50 &1446619635
 Rigidbody2D:
