@@ -23,7 +23,6 @@ namespace Assets.Scripts
 		private PlayerController _playerControl;
         private bool _pressing;
         public static BreakObjects Instance = null;
-		private GameObject _lightBall;
 
         public void Awake()
         {
@@ -36,7 +35,6 @@ namespace Assets.Scripts
 
         public void Start(){
 			_playerControl = PlayerController.Instance;
-			_lightBall = GameObject.FindGameObjectWithTag ("LightBall");
            /* _tr = _playerControl.gameObject.transform;
 			p = (ParticleEmitter)(GameObject.Find("puxaluz (1)").GetComponent(typeof(ParticleEmitter)));
 			particles = p.particles;
@@ -141,17 +139,8 @@ namespace Assets.Scripts
             var breakable = col.GetComponent<BreakableObject>();
             Mirror.Instance.AddBrokenObject(breakable);
             breakable.BreakObject();
-			moveLightBall(col.gameObject);
 			// libera a bola de luz até o player
         }
-
-		private void moveLightBall(GameObject obj){
-
-			_lightBall.gameObject.SetActive (true);
-			_lightBall.transform.position = obj.transform.position;
-			//_lightBall.transform.position = Vector3.MoveTowards (obj.transform.position, transform.position, 2.0f * Time.deltaTime);
-
-		}
 
         Collider2D FindNearestObject()
         {
