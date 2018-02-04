@@ -17,7 +17,7 @@ namespace Assets.Scripts
             _currentWaypoint = Points[0];
         }
 
-        public void Update () {
+        public void FixedUpdate () {
             if (Vector3.Distance(transform.position, _currentWaypoint) <= 0.02 && !_changedWaypoint)
             {
                 ChangeWayPoint();
@@ -40,6 +40,7 @@ namespace Assets.Scripts
 			if (_pointsIterator == Points.Length) {
 				_pointsIterator = 1;
 				System.Array.Reverse (Points);
+				transform.Rotate (0, 180, 0);
 
 			}
             _currentWaypoint = Points[_pointsIterator];
