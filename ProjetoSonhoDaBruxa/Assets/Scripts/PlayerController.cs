@@ -20,12 +20,11 @@ namespace Assets.Scripts
         private string _lastDirection;
         private bool _canFlip;
         private MovementDirection _directions;
-
-		private Animator _anim;
+        
 
         public static PlayerController Instance = null;
         private Vector3 _rebornPosition;
-        private bool _dead;
+        public bool IsDead;
 
         public void Awake()
         {
@@ -38,7 +37,6 @@ namespace Assets.Scripts
 
         public void Start()
         {
-			_anim = gameObject.GetComponentInChildren(typeof(Animator)) as Animator;
             _rb = transform.GetComponent<Rigidbody2D>();
             _rb.gravityScale = 0.0f;
             _rb.freezeRotation = true;
@@ -51,13 +49,13 @@ namespace Assets.Scripts
             if (Pause.Instance.IsPauseActive())
                 return;
 
-            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || _dead)
+            if (!_directions.Left && !_directions.Right && !_directions.Up && !_directions.Down || IsDead)
             {
                 IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
             }
 
-            if(_dead)
+            if(IsDead)
                 return;
 
             SetCanFlip();
@@ -65,12 +63,6 @@ namespace Assets.Scripts
 			GetKeys();
 
             GetKeysUp();
-
-            
-
-            _anim.SetBool("IsWalking", IsMoving);
-            _anim.SetBool("Idle", !IsMoving);
-            _anim.SetBool("Power", BreakObjects.Instance.GetIfPressingButtonsToBreakObjects());
         }
 
         private void GetKeysUp()
@@ -181,24 +173,15 @@ namespace Assets.Scripts
 
         public void Die(Vector3 position)
         {
-            _anim.SetBool("Dead", true);
-            _dead = true;
+            IsDead = true;
             _rebornPosition = position;
         }
 
         public void Reborn()
         {
-            StartCoroutine("SetDeadFalse");
-            _anim.SetBool("Dead", false);
+            IsDead = false;
             transform.position = _rebornPosition;
         }
-
-        private IEnumerator SetDeadFalse()
-        {
-            yield return new WaitForSeconds(TimeFrozenWhenRespawn);
-            _dead = false;
-        }
-
 
         public void ApplyForce()
 		{

@@ -1301,6 +1301,7 @@ MonoBehaviour:
   AcelerationForce: 0
   IsPulling: 0
   IsMoving: 0
+  IsDead: 0
 --- !u!114 &114641639697210242
 MonoBehaviour:
   m_ObjectHideFlags: 1
