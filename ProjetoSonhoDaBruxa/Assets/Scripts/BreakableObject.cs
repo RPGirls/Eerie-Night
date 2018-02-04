@@ -9,6 +9,7 @@ namespace Assets.Scripts
         public void BreakObject()
         {
             GetComponent<SpriteRenderer>().sprite = BrokenObject;
+            tag = "Untagged";
         }
     }
 }

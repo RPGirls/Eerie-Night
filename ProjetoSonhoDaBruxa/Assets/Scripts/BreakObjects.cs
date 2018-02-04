@@ -15,8 +15,9 @@ namespace Assets.Scripts
         private bool _ready;
         private float _pressTime;
 		private PlayerController _playerControl;
+        private bool _pressing;
 
-		public void Start(){
+        public void Start(){
 
 			_playerControl = PlayerController.Instance;
 		}
@@ -28,19 +29,19 @@ namespace Assets.Scripts
 
             Collider2D col = FindNearestObject();
 
-			if ((_playerControl.IsMoving && Input.GetKeyDown(KeyCode.Space)) && _ready == false && col !=null)
+            if (Input.GetKey(KeyCode.Space) && _playerControl.IsMoving && _ready == false && col != null && !_pressing)
             {
-				//if (Input.GetKeyDown(KeyCode.Space) && _playerControl.IsMoving)
-                //{
-                    StillPressing();
-               // }*/
+                _pressing = true;
+                StillPressing();
             }
             if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S) || col == null)
             {
+                _pressing = false;
                 StoppedPressing();
             }
             if (Time.time >= _pressTime && _ready)
             {
+                _pressing = false;
                 PressedEnoughTime(col);
             }
 
