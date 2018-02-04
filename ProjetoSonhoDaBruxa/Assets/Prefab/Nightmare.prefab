@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212758534982791082}
   - component: {fileID: 58815542635390764}
   - component: {fileID: 114724526277964340}
-  - component: {fileID: 114920593869912982}
   m_Layer: 0
   m_Name: FirstVersion
   m_TagString: Untagged
@@ -56,7 +55,6 @@ GameObject:
   - component: {fileID: 4329343148843344}
   - component: {fileID: 114663281476578244}
   - component: {fileID: 114453816093210204}
-  - component: {fileID: 114102919330925504}
   m_Layer: 0
   m_Name: Nightmare
   m_TagString: Untagged
@@ -75,7 +73,6 @@ GameObject:
   - component: {fileID: 212793072833276226}
   - component: {fileID: 58048798790860682}
   - component: {fileID: 114603030544688456}
-  - component: {fileID: 114375066744678224}
   m_Layer: 0
   m_Name: SecondVersion
   m_TagString: Untagged
@@ -599,20 +596,6 @@ MonoBehaviour:
   m_SortingOrder: 1
   m_Bones: []
   m_BoneTransforms: []
---- !u!114 &114102919330925504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413607857889798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e42946254ff5d0942aa92bac7955babf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListOfPossibleObjects:
-  - {fileID: 1060988758192484}
-  - {fileID: 1417103098272428}
 --- !u!114 &114310516181256164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -629,17 +612,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114375066744678224
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417103098272428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd0e78f9d0a0b40baf52b2a451a604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114453816093210204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -746,8 +718,7 @@ MonoBehaviour:
   Points:
   - {x: -2.31, y: 0, z: 0}
   - {x: -5.35, y: 0, z: 0}
-  - {x: -5.35, y: -2.25, z: 0}
-  Speed: 2
+  Speed: 27
 --- !u!114 &114724526277964340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -797,17 +768,6 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_Bones: []
   m_BoneTransforms: []
---- !u!114 &114920593869912982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060988758192484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdd0e78f9d0a0b40baf52b2a451a604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212152756048992844
 SpriteRenderer:
   m_ObjectHideFlags: 1
