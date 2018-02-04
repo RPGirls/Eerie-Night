@@ -16,7 +16,7 @@ namespace Assets.Scripts
         private float _pressTime;
 		private PlayerController _playerControl;
 
-		void Start(){
+		public void Start(){
 
 			_playerControl = PlayerController.Instance;
 		}
@@ -25,35 +25,60 @@ namespace Assets.Scripts
         {
             if (Pause.Instance.IsPauseActive())
                 return;
-            if (Input.GetKeyDown(KeyCode.Space) && _ready == false)
+
+            Collider2D col = FindNearestObject();
+
+            if (Input.GetKeyDown(KeyCode.Space) && _ready == false && col !=null)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    _startTime = Time.time;
-                    _pressTime = _startTime + HoldTime;
-                    _playerControl._isPulling = true;
-                    _ready = true;
-                    ShowLight();
+                    StillPressing();
                 }
             }
-            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.S) || col == null)
             {
-                _ready = false;
-                EndLight();
-				_playerControl._isPulling = false;
+                StoppedPressing();
             }
             if (Time.time >= _pressTime && _ready)
             {
-                _ready = false;
-                FindObjectAndBreak();
-				_playerControl._isPulling = false;
+                PressedEnoughTime(col);
             }
 
         }
 
-        private void EndLight()
+        private void StillPressing()
         {
-            Light.color = Color.white;
+            _startTime = Time.time;
+            _pressTime = _startTime + HoldTime;
+            _playerControl.IsPulling = true;
+            _ready = true;
+            ShowLight();
+            //StartParticle();
+        }
+
+        private void StoppedPressing()
+        {
+            _ready = false;
+            EndLight();
+            //StopParticle();
+            _playerControl.IsPulling = false;
+        }
+
+        private void PressedEnoughTime(Collider2D col)
+        {
+            _ready = false;
+            BreakObject(col);
+            _playerControl.IsPulling = false;
+        }
+
+        private void StopParticle()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void StartParticle()
+        {
+            throw new System.NotImplementedException();
         }
 
         private void ShowLight()
@@ -61,9 +86,14 @@ namespace Assets.Scripts
             Light.color = Color.red;
         }
 
+        private void EndLight()
+        {
+            Light.color = Color.white;
+        }
+
         private void FindObjectAndBreak()
         {
-            Collider2D col = FindObject();
+            Collider2D col = FindNearestObject();
             if (col != null)
                 BreakObject(col);
         }
@@ -74,7 +104,7 @@ namespace Assets.Scripts
             col.GetComponent<BreakableObject>().BreakObject();
         }
 
-        Collider2D FindObject ()
+        Collider2D FindNearestObject()
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, Radius);
 

@@ -156,6 +156,11 @@ Prefab:
       propertyPath: m_Name
       value: Nightmare
       objectReference: {fileID: 0}
+    - target: {fileID: 137108632772361060, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114427857559701528, guid: 2a9f705275ff6fd4fa673a8e6d93aeca, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2a9f705275ff6fd4fa673a8e6d93aeca, type: 2}
@@ -865,7 +870,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 212857801952231920, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1391109176 stripped
