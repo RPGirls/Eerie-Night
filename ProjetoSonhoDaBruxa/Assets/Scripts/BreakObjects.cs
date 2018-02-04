@@ -28,9 +28,9 @@ namespace Assets.Scripts
 
             Collider2D col = FindNearestObject();
 
-            if (Input.GetKeyDown(KeyCode.Space) && _ready == false && col !=null)
+			if ((Input.GetKeyDown(KeyCode.Space) || _playerControl.IsMoving)  && _ready == false && col !=null)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (_playerControl.IsMoving)
                 {
                     StillPressing();
                 }

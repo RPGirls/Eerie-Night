@@ -14,6 +14,7 @@ namespace Assets.Scripts
         private string _lastDirection;
         private bool _canFlip;
         public bool IsPulling;
+		public bool IsMoving;
 
         public void Awake()
         {
@@ -50,8 +51,9 @@ namespace Assets.Scripts
                 _canFlip = true;
             }
 
-            if (Input.GetKey(KeyCode.A))
+			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
+				IsMoving = true;
                 if (IsPulling)
                     _rb.velocity = new Vector2(Vector2.left.x*SlowerPace, _rb.velocity.y);
                 else
@@ -64,8 +66,9 @@ namespace Assets.Scripts
                     _lastDirection = "A";
                 }
             }
-            else if (Input.GetKey(KeyCode.D))
+			else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
+				IsMoving = true;
                 if (IsPulling)
                     _rb.velocity = new Vector2(Vector2.right.x*SlowerPace, _rb.velocity.y);
                 else
@@ -78,21 +81,26 @@ namespace Assets.Scripts
                     _lastDirection = "D";
                 }
             }
-            if (Input.GetKey(KeyCode.W))
+			if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                if (!IsPulling)
+				IsMoving = true;
+				if (IsPulling) {
+					_rb.velocity = new Vector2(_rb.velocity.x, Vector2.up.y*SlowerPace);
+				} else {
+					_rb.velocity = new Vector2(_rb.velocity.x, Vector2.up.y*PlayerPace);
+				}
+                
+				if (_lastDirection != "W" && _canFlip)
                 {
-                    _rb.velocity = new Vector2(_rb.velocity.x, Vector2.up.y*PlayerPace);
-                    if (_lastDirection != "W" && _canFlip)
-                    {
-                        //Flip para esquerda
-                        Debug.Log("Flip cima");
-                        _lastDirection = "W";
-                    }
+                    //Flip para esquerda
+                    Debug.Log("Flip cima");
+                    _lastDirection = "W";
                 }
+                
             }
-            else if (Input.GetKey(KeyCode.S))
+			else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
+				IsMoving = true;
                 if (IsPulling)
                     _rb.velocity = new Vector2(_rb.velocity.x, Vector2.down.y*SlowerPace);
                 else
@@ -108,7 +116,7 @@ namespace Assets.Scripts
             if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W)
                 || Input.GetKeyUp(KeyCode.S))
             {
-
+				IsMoving = false;
                 _rb.velocity = new Vector2(0, 0);
                 // Trigger Idle
                 Debug.Log("Idle animation");
