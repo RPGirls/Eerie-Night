@@ -10,6 +10,7 @@ namespace Assets.Scripts
 
         public GameObject[] Orbs;
         private int _difference;
+        public float WaitTimeBetweenOrbs;
 
         public void OnTriggerEnter2D(Collider2D other){
 
@@ -30,7 +31,7 @@ namespace Assets.Scripts
             for (int i = _orbsCounter; i < _difference; i++)
             {
                 Orbs[i].SetActive(true);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(WaitTimeBetweenOrbs);
             }
         }
     }

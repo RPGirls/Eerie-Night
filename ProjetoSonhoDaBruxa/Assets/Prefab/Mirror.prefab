@@ -214,7 +214,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352669944002772}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.66, y: 2.61, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_Children:
   - {fileID: 4351058100492684}
@@ -435,6 +435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WinLevel: WinScene
   NumberOfObjects: 4
+  _objectCounter: 0
+  WaitTimeForWin: 0.5
 --- !u!114 &114767769099667606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,6 +454,7 @@ MonoBehaviour:
   - {fileID: 1446593262555996}
   - {fileID: 1848692408344214}
   - {fileID: 1282560072171512}
+  WaitTimeBetweenOrbs: 0.35
 --- !u!198 &198091321528867600
 ParticleSystem:
   m_ObjectHideFlags: 1
