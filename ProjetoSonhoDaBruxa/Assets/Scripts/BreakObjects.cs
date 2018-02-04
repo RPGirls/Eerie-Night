@@ -53,7 +53,7 @@ namespace Assets.Scripts
                 _pressing = true;
                 StillPressing();
             }
-			if (Input.GetKeyUp(KeyCode.Space) || _playerControl.IsMoving || col == null)
+			if (Input.GetKeyUp(KeyCode.Space) || !_playerControl.IsMoving || col == null)
             {
                 _pressing = false;
                 StoppedPressing();
