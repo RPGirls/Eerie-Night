@@ -20,7 +20,6 @@ namespace Assets.Scripts
                 //Trigger orbs
                 var orbsCollected = Mirror.Instance.GetObjectCounter();
                _difference = orbsCollected - _orbsCounter;
-                Debug.Log(_difference + "diff");
                 StartCoroutine("StartOrbs");
             }
         }
@@ -33,6 +32,8 @@ namespace Assets.Scripts
                 Orbs[i].SetActive(true);
                 yield return new WaitForSeconds(WaitTimeBetweenOrbs);
             }
+            Mirror.Instance.CheckIfWin();
+
         }
     }
 }
