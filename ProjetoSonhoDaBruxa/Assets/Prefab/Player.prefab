@@ -1085,6 +1085,7 @@ MonoBehaviour:
   Light: {fileID: 108234689928706616}
   p: {fileID: 0}
   affectDistance: 10
+  ColorForInteraction: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114042768479771288
 MonoBehaviour:
   m_ObjectHideFlags: 1

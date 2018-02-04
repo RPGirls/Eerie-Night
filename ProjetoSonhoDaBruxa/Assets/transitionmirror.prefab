@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 199459511112761152}
   - component: {fileID: 65588341182367728}
   m_Layer: 0
-  m_Name: mirorsmoke2 1 1
+  m_Name: transitionmirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
