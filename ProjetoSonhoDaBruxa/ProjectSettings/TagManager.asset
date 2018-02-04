@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactive
   - Wall
+  - EnemyCollider
   layers:
   - Default
   - TransparentFX
@@ -43,9 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Deco
+    uniqueID: 673326771
+    locked: 0
+  - name: Enemy
+    uniqueID: 3171820945
+    locked: 0
   - name: Player
     uniqueID: 91725887
-    locked: 0
-  - name: 
-    uniqueID: 3171820945
     locked: 0

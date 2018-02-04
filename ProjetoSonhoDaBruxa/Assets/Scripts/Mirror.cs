@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
@@ -6,7 +7,10 @@ namespace Assets.Scripts
     public class Mirror : MonoBehaviour {
         public string WinLevel;
         public int NumberOfObjects;
+        [SerializeField]
         private int _objectCounter = 0;
+
+        public float WaitTimeForWin;
 
         public static Mirror Instance = null;
 
@@ -22,15 +26,26 @@ namespace Assets.Scripts
         {
             if (_objectCounter == NumberOfObjects)
             {
-                Debug.Log("Ganhou");
-                SceneManager.LoadScene(WinLevel); // Se tiver tudo coletado vai pra tela final
+                StartCoroutine("WinCoroutine");
+                
             }
+        }
+
+        private IEnumerator WinCoroutine()
+        {
+            Debug.Log("Ganhou");
+            yield return new WaitForSeconds(WaitTimeForWin == 0 ? 0.4f : WaitTimeForWin);
+            SceneManager.LoadScene(WinLevel); // Se tiver tudo coletado vai pra tela final
         }
 
         public void AddBrokenObject()
         {
-            Debug.Log("win");
             _objectCounter ++;
+        }
+
+        public int GetObjectCounter()
+        {
+            return _objectCounter;
         }
     }
 }

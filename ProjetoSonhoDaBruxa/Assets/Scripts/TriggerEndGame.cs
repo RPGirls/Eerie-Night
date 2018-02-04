@@ -6,7 +6,7 @@ namespace Assets.Scripts
         
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player")
+            if (other.tag == "EnemyCollider")
             {
                 RespawnPlayer.Instance.EndGame();
             }
