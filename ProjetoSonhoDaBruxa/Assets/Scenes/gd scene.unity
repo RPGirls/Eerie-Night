@@ -269,50 +269,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &356449489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 356449490}
-  - component: {fileID: 356449491}
-  m_Layer: 0
-  m_Name: EnemyCollider
-  m_TagString: EnemyCollider
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &356449490
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356449489}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 735508541}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &356449491
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356449489}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.8313912, y: 2.011135}
-  m_Direction: 0
 --- !u!1 &364718417
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +548,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
@@ -614,11 +570,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 364718418}
     m_Modifications:
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4329343148843344, guid: 2a9f705275ff6fd4fa673a8e6d93aeca, type: 2}
       propertyPath: m_LocalPosition.x
       value: 15.73
@@ -651,59 +602,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 137108632772361060, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[0].x
-      value: 15.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[0].y
-      value: 2.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[1].x
-      value: 15.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[1].y
-      value: -16.54
-      objectReference: {fileID: 0}
     - target: {fileID: 33142360408287006, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1413607857889798, guid: 2a9f705275ff6fd4fa673a8e6d93aeca, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114594252813891334, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: m_Length
-      value: 1.3000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[2].x
-      value: -5.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Points.Array.data[2].y
-      value: -2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114663281476578244, guid: 2a9f705275ff6fd4fa673a8e6d93aeca,
-        type: 2}
-      propertyPath: Speed
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a9f705275ff6fd4fa673a8e6d93aeca, type: 2}
@@ -879,7 +781,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 91725887
+  m_SortingLayerID: 673326771
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -1705,12 +1607,12 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: 91725887
+      value: -1123146351
       objectReference: {fileID: 0}
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22587c01621e94f3db9060e85af093cb, type: 2}
@@ -1723,11 +1625,6 @@ Transform:
 --- !u!1 &735508535 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1432450488973814, guid: 161ba20f8b0f848509a515d76cc7cc1f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1166799812}
---- !u!4 &735508541 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4465501642069638, guid: 161ba20f8b0f848509a515d76cc7cc1f,
     type: 2}
   m_PrefabInternal: {fileID: 1166799812}
 --- !u!4 &749565282 stripped
@@ -1811,7 +1708,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
@@ -2139,13 +2036,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1652944485319250, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
-      propertyPath: m_Name
-      value: Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668679113042070, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
+    - target: {fileID: 114699138706313282, guid: 161ba20f8b0f848509a515d76cc7cc1f,
+        type: 2}
+      propertyPath: PlayerPace
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 161ba20f8b0f848509a515d76cc7cc1f, type: 2}
@@ -20030,7 +19924,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114059125645714116, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
@@ -21595,7 +21489,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
@@ -22217,7 +22111,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22587c01621e94f3db9060e85af093cb, type: 2}
@@ -22313,7 +22207,7 @@ Prefab:
     - target: {fileID: 137561770417906596, guid: 22587c01621e94f3db9060e85af093cb,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22587c01621e94f3db9060e85af093cb, type: 2}
