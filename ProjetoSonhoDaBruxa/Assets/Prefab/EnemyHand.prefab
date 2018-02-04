@@ -192,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583277882459722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.745613, y: -3.7295823, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.333333, y: 3.333333, z: 0}
   m_Children:
   - {fileID: 4004740176920070}
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.3600008
+  m_Length: 1.36
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4820707870963620}
   m_AttachedIK: {fileID: 0}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000005
+  m_Length: 0.9999995
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4831416366047204}
   m_AttachedIK: {fileID: 0}
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.000001
+  m_Length: 1.0000006
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4574882617963286}
   m_AttachedIK: {fileID: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1
+  m_Length: 1.0000013
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4819960258929252}
   m_AttachedIK: {fileID: 0}
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.56000066
+  m_Length: 0.5600004
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4100125635965710}
   m_AttachedIK: {fileID: 0}
@@ -499,8 +499,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 91725887
-  m_SortingLayer: 3
+  m_SortingLayerID: -1123146351
+  m_SortingLayer: 2
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0

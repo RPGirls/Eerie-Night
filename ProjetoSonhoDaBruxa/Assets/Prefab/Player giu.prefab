@@ -1105,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPace: 4
   SlowerPace: 0.2
+  TimeFrozenWhenRespawn: 0
   AcelerationForce: 0
   IsPulling: 0
   IsMoving: 0
