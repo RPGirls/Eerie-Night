@@ -912,6 +912,37 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: Rigg Bruxa/hip/torso/shoulder_left/elbow_left
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1.2428032, y: 0.38526902, z: 1.2428033}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.68333334
+        value: {x: 0.7622233, y: 0.23628925, z: 0.7622234}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.8666667
+        value: {x: 0.770691, y: 0.23891422, z: 0.770691}
+        inSlope: {x: 0.014620446, y: 0.004532329, z: 0.01462024}
+        outSlope: {x: 0.014620446, y: 0.004532329, z: 0.01462024}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 3
+        value: {x: 0.86171573, y: 0.26713187, z: 0.8617157}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sombra
   m_FloatCurves:
   - curve:
       serializedVersion: 2
@@ -1133,6 +1164,13 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 3406139857
+      attribute: 3
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2233024844
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -4127,6 +4165,108 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
     path: Rigg Bruxa/hip/torso/head
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1.2428032
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 0.68333334
+        value: 0.7622233
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.8666667
+        value: 0.770691
+        inSlope: 0.014620446
+        outSlope: 0.014620446
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0.86171573
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Sombra
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0.38526902
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 0.68333334
+        value: 0.23628925
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.8666667
+        value: 0.23891422
+        inSlope: 0.004532329
+        outSlope: 0.004532329
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0.26713187
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Sombra
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1.2428033
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 0.68333334
+        value: 0.7622234
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.8666667
+        value: 0.770691
+        inSlope: 0.01462024
+        outSlope: 0.01462024
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 3
+        value: 0.8617157
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Sombra
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
