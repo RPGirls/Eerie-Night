@@ -90,26 +90,11 @@ namespace Assets.Scripts
 
         private void PressedEnoughTime(Collider2D col)
         {
-			//makeParticlesFollow ();
             _ready = false;
             BreakObject(col);
             _playerControl.IsPulling = false;
 			_playerControl.ApplyForce ();
         }
-
-		// Codigo do cara que eu copiei
-		/*private void makeParticlesFollow (){
-			
-			float dist;
-			for (int i=0; i < particles.GetUpperBound(0))
-			{
-				dist = Vector3.SqrMagnitude(_tr.position - particles[i].position);
-				if (dist < _sqrDist) {
-					particles[i].position = Vector3.Lerp(particles[i].position,transform.position,Time.deltaTime / 2.0f);
-				}
-			}
-			p.particles = particles;
-		}*/
 
         private void StopParticle()
         {

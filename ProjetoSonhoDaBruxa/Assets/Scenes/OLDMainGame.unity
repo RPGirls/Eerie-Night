@@ -26538,11 +26538,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4296142208956814, guid: 29783d8175419044596629b779d7a0c8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 4296142208956814, guid: 29783d8175419044596629b779d7a0c8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: 12.2
       objectReference: {fileID: 0}
     - target: {fileID: 4296142208956814, guid: 29783d8175419044596629b779d7a0c8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -26572,6 +26572,11 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024856042284482, guid: 29783d8175419044596629b779d7a0c8,
+        type: 2}
+      propertyPath: HoldTime
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29783d8175419044596629b779d7a0c8, type: 2}
