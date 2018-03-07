@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: hand
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 21300000, guid: d7dc8f43ef1e83a49b99208657343969, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0658dcee2692c724cbcab89e20320986, type: 3}
   m_SharedMesh: {fileID: 43527201362346984}
   pivotPoint: {x: 186, y: 245}
   texVertices: []
