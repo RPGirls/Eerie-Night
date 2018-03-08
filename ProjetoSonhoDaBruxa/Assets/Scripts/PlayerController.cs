@@ -31,6 +31,8 @@ namespace Assets.Scripts
 
         public void Awake()
         {
+            Time.timeScale = 1f;
+
             if (Instance == null) //Check if instance already exists
                 Instance = this; //if not, set instance to this
             else if (Instance != this) //If instance already exists and it's not this:

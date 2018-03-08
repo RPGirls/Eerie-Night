@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b248ab56051774484953d29e78109f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanPressEnter: 1
+  CanPressEnter: 0
   GameSceneName: Menu
 --- !u!1 &1989525247
 GameObject:
