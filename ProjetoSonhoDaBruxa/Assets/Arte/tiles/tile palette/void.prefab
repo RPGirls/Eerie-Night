@@ -90,7 +90,7 @@ Grid:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946758190391200}
   m_Enabled: 1
-  m_CellSize: {x: 2, y: 2, z: 0}
+  m_CellSize: {x: 1.9960938, y: 2, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -258,15 +258,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 4, y: -6, z: 0}
-    second:
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 6, y: -6, z: 0}
     second:
       m_TileIndex: 1
@@ -304,8 +295,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 3de846652de3d6349a2caef1b85ce171, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0c63db36517e05941a451df9bffd5efa, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 41c8b00a6105e1346b2e05a540afb6e6, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2c580351354ea57498feb2e50c0a9f6c, type: 2}
   - m_RefCount: 1
@@ -339,8 +330,8 @@ Tilemap:
     m_Data: {fileID: 21300008, guid: 9935dfb13ce77e04193585bb8c9e0a38, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300006, guid: 9935dfb13ce77e04193585bb8c9e0a38, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300004, guid: 9935dfb13ce77e04193585bb8c9e0a38, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 9935dfb13ce77e04193585bb8c9e0a38, type: 3}
   - m_RefCount: 1
@@ -366,7 +357,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300008, guid: 6a57ee8df0a314049ada44dab2e37e6a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 17
+  - m_RefCount: 16
     m_Data:
       e00: 1
       e01: 0
@@ -385,7 +376,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 17
+  - m_RefCount: 16
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
