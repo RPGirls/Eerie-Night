@@ -6,6 +6,7 @@ namespace Assets.Scripts
     public class HandAttack : MonoBehaviour {
 
         private bool _attacking;
+        [SerializeField] private AudioSource _audioSmash;
     
         void Start () {
             StartCoroutine (HandAttacking());
@@ -34,6 +35,11 @@ namespace Assets.Scripts
 
                 yield return new WaitForSeconds(1.0f);
             }
+        }
+
+        public void HandSound()
+        {
+            _audioSmash.Play();
         }
     }
 }
