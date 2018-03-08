@@ -38,6 +38,7 @@ namespace Assets.Scripts
 
         private IEnumerator WinCoroutine()
         {
+            MirrorTrigger.Instance.TriggerWinMirror();
             Debug.Log("Ganhou");
 			GetComponent<AudioSource> ().Play ();
             yield return new WaitForSeconds(WaitTimeForWin == 0 ? 0.4f : WaitTimeForWin);

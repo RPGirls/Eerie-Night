@@ -14,8 +14,23 @@ namespace Assets.Scripts
 
         public GameObject CloseToMirror;
         public GameObject FarFromMirror;
-        
-        public void OnTriggerEnter2D(Collider2D other){
+        public GameObject WinMirror;
+
+        public static MirrorTrigger Instance = null;
+        private bool _win;
+
+        public void Awake()
+        {
+            if (Instance == null)//Check if instance already exists
+                Instance = this;//if not, set instance to this
+            else if (Instance != this)//If instance already exists and it's not this:
+                Destroy(gameObject); //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+        }
+
+        public void OnTriggerEnter2D(Collider2D other)
+        {
+            if (_win)
+                return;
 
             if (other.tag == "Player") {
                 // Trigger close to mirror
@@ -31,6 +46,9 @@ namespace Assets.Scripts
 
         public void OnTriggerExit2D(Collider2D other)
         {
+            if (_win)
+                return;
+
             TriggerFarFromMirror();
         }
 
@@ -38,12 +56,25 @@ namespace Assets.Scripts
         {
             CloseToMirror.SetActive(true);
             FarFromMirror.SetActive(false);
+            WinMirror.SetActive(false);
         }
 
         private void TriggerFarFromMirror()
         {
             CloseToMirror.SetActive(false);
             FarFromMirror.SetActive(true);
+            WinMirror.SetActive(false);
+        }
+
+        public void TriggerWinMirror()
+        {
+            if (WinMirror == null)
+                return;
+            _win = true;
+          
+            CloseToMirror.SetActive(false);
+            FarFromMirror.SetActive(false);
+            WinMirror.SetActive(true);
         }
 
         private IEnumerator StartOrbs()
