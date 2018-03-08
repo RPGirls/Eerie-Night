@@ -27,6 +27,7 @@ namespace Assets.Scripts
         public static PlayerController Instance = null;
         private Vector3 _rebornPosition;
         public bool IsDead;
+        public bool GetLight;
 
         public void Awake()
         {

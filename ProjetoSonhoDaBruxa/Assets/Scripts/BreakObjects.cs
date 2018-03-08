@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
 namespace Assets.Scripts
@@ -65,9 +66,17 @@ namespace Assets.Scripts
             if (Time.time >= _pressTime && _ready)
             {
                 _pressing = false;
+                _playerControl.GetLight = true;
+                StartCoroutine(EndGetLight());
                 PressedEnoughTime(col);
             }
 
+        }
+
+        IEnumerator EndGetLight()
+        {
+            yield return new WaitForSeconds(0.3f);
+            _playerControl.GetLight = false;
         }
 
         private void StillPressing()

@@ -18,6 +18,7 @@ namespace Assets.Scripts
             _anim.SetBool("Idle", !control.IsMoving);
             _anim.SetBool("Power", BreakObjects.Instance.GetIfPressingButtonsToBreakObjects());
             _anim.SetBool("Dead", control.IsDead);
+            _anim.SetBool("GetLight", control.GetLight);
         }
     }
 }

@@ -1044,6 +1044,7 @@ MonoBehaviour:
   IsMoving: 0
   BreakableObjectPos: {x: 0, y: 0, z: 0}
   IsDead: 0
+  GetLight: 0
 --- !u!114 &114561844599792604
 MonoBehaviour:
   m_ObjectHideFlags: 1
